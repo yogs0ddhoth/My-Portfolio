@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Lorem Ipsum Dolor</title>
+  <title>Ben Lin</title>
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -14,10 +14,10 @@
     <nav>
       <ul>
         <!-- TODO: link resume -->
-        <li><a href="#about-me"></a>About Me</li>
-        <li><a href="#my-work"></a>My Work</li>
-        <li><a href="#contact-me"></a>Contact Me</li>
-        <li><a href="#"></a>Resume</li>
+        <li class="nav-link"><a href="#about-me"></a>About Me</li>
+        <li class="nav-link"><a href="#my-work"></a>My Work</li>
+        <li class="nav-link"><a href="#contact-me"></a>Contact Me</li>
+        <li class="nav-link" ><a href="#"></a>Resume</li>
       </ul>
     </nav>
   </header>
@@ -34,15 +34,17 @@
 
     <br />
 
+    <!-- decide whether to use id or class for styling -->
     <section id="my-work" class="work"> 
       <h2>My Work</h2>
       <!-- links to projects -->
-      <ul>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-      </ul>
+      <div>
+        <a href="" class="first-project"><span>lorem</span></a>
+        <a href="" class="project">ipsum</a>
+        <a href="" class="project">dolor</a>
+        <a href="" class="project">sit amet</a>
+      </div>
+    
     </section>
   </main>
   
@@ -50,14 +52,16 @@
   
   <footer id="contact-me" class="contact">   
     <h2>Contact Me</h2>
-    <ul>
+    <div>
+      <ul>
         <!-- TODO: link email and phone-->
-      <li>phone</li>
-      <li>email</li>
-      <li><a href="https://github.com/yogs0ddhoth">GitHub</a></li>
-      <li><a href="https://stackoverflow.com/users/17608484/blin">Stack Overflow</a></li>
-      <li><a href="https://www.linkedin.com/in/benjamin-lin-b70a79227">LinkedIn</a></li>
-    </ul>
+        <li>phone</li>
+        <li>email</li>
+        <li><a href="https://github.com/yogs0ddhoth">GitHub</a></li>
+        <li><a href="https://stackoverflow.com/users/17608484/blin">Stack Overflow</a></li>
+        <li><a href="https://www.linkedin.com/in/benjamin-lin-b70a79227">LinkedIn</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>

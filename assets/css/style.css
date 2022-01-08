@@ -1,5 +1,7 @@
 /*** TODO: Define styles ***/
-
+:root {
+  var
+}
 * {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -7,17 +9,20 @@
 .header {
   width: 100%;
   padding: ;
-  color: ;
+  background-color: black;
+  color: white;
 }
 
 .header h1 {
   display: inline-block;
-  font-size: ;
-  color: ;
+  padding-top: 25px;
+  padding-left: 20px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .header nav {
-  padding-top: ;
+  padding-bottom: 15px;
   margin-right: 25px;
   display: flex;
   justify-content: flex-end;
@@ -33,6 +38,12 @@
 .header nav ul li {
   margin-left: 25px;
   display:inline-block;
+  opacity: 75%;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /* 
@@ -40,6 +51,10 @@ TODO:
 1. Decide alignment of h2 relative to content
 2. Decide whether h2 is included in the flexbox for both .about and .work 
 */
+
+h2 {
+  font-size: 1.4rem;
+}
 .about {
   width: ;
   display: ;
@@ -54,20 +69,54 @@ p {
   display: ;  
 }
 
+.work h2 {
+  display: inline-block;
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+span {
+  bottom: 0px;
+}
+
+/* figure out how to get text at the center or bottom of container*/
+.first-project {
+  width: 100%;
+  height: 500px;
+  border: white;
+  text-align: center;
+}
+
+.project {
+  width: 50%;
+  height: 250px;
+  border: white;
+  text-align: center;
+}
+
 footer {
     width: 100%;
     bottom: 0;
     padding: ;
-    background: ;
-    color: ;
+    background-color: black;
+    color: white;
 }
 
 footer h2 {
     display: inline-block;
     font-size: ;
-    color: ;
 } 
 
-footer ul {
-  list-style-type: none;
+footer div {
+  padding-bottom: 15px;
+  margin-right: 25px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: ;
+  opacity: 75%;
 }
