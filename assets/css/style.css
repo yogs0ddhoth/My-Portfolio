@@ -75,7 +75,7 @@ h2 {
 }
 
 main h2 {
-  text-shadow: .2rem .2rem rgba(0, 0, 0, 0.85); 
+  text-shadow: .1rem .1rem rgba(0, 0, 0, 0.85); 
 }
 
 .about {
@@ -84,6 +84,10 @@ main h2 {
 
 p {
   font-size: small;
+}
+
+.sub {
+  font-size: x-small;
 }
 
 .work {
