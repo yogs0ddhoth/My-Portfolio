@@ -125,7 +125,7 @@ p {
   text-align: center;
 }
 
-.project figure img {
+figure img {
   opacity: 30%;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.9);
@@ -133,7 +133,7 @@ p {
   box-shadow: .4rem .4rem .2rem rgba(0, 0, 0, 0.85);
 }
 
-.project figure img:hover {
+figure img:hover {
   opacity: 100%;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.9);
@@ -142,7 +142,7 @@ p {
   cursor: pointer;
 }
 
-.project figure div {
+figure div {
   width: 50%;
   position: relative;
   bottom: 7rem;
@@ -151,6 +151,14 @@ p {
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   text-align: center;
+}
+
+figure div a {
+  text-decoration: underline;
+}
+
+figure div a:hover {
+  cursor: pointer;
 }
 
 footer {
