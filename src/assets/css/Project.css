@@ -1,10 +1,11 @@
 img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
-.project {
-  max-height: 15%;
-}
+/* .project {
+ 
+} */
 .project img {
   opacity: 30%;
   border-style: solid;
@@ -24,7 +25,7 @@ img {
   float: left;
   width: 66%;
   position: relative;
-  bottom: 8.5rem;
+  bottom: 6rem;
   
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.9);

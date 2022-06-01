@@ -10,7 +10,7 @@ export default function Resume() {
   
   return (
     <div className='col-12 flex-row'>
-      <h2 className='title'>
+      <h2 className='title col-12'>
         My Resume:<a href={benLinResume} download={Resume} className='title col-12 align-start'>
         {/* <FontAwesomeIcon icon={solid('p')} /> */}
         download

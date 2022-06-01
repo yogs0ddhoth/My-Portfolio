@@ -1,13 +1,15 @@
 .App {
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   min-width: 100%;
+  /* display: flexbox; */
   /* text-align: center; */
 }
 .contentWrap {
-  padding-bottom: 3rem;
+  min-height: 100vh;
+  padding-bottom: 8rem;
 }
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -16,7 +18,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;

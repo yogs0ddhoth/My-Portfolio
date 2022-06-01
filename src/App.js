@@ -15,8 +15,8 @@ import Footer from './components/Footer';
 function App() {
 
   return (
-    <div className="App theme-1">
-      <div className='contentWrap pb-1'>
+    <div className="App theme-1 flex-column">
+      <div className='contentWrap'>
         <Header />
 
         <Routes>
