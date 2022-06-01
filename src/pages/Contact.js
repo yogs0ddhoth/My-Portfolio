@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import '../assets/css/style.css';
+import '../assets/css/Contact.css'
 
 // import ContactForm from './contactForm';
 
@@ -56,13 +58,13 @@ export default function Contact() {
 
   const errStatus = (state, err, selectedState, htmlId) => {
     if (err === true || (err === false && selectedState !== htmlId && state === '')) {
-      return <span>* This field is required.</span>
+      return <span className='error'>* This field is required.</span>
     }
   };
 
   const emailStatus = () => {
     if (formErr.email === true || emailValid === false || (formErr.email === false && selected !== 'email' && emailValid === false)) {
-      return <span>Enter a valid email address.</span>
+      return <span className='error'>Enter a valid email address.</span>
     }
   }
 
