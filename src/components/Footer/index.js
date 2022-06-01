@@ -11,7 +11,7 @@ export default function Footer(props) {
   return (
     <div className='footer theme-2 col-12 pt-3'>
       
-      <ul className='col-12 flex-row justify-center'>
+      <ul className='col-12 flex-row'>
 
         <li className="icon email col-2 col-1-sm row justify-center">
           <a href="mailto:blin7.webdev@gmail.com" className='col-12 row'>

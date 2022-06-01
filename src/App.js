@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App theme-1">
-      <div className='contentWrap'>
+      <div className='contentWrap pb-1'>
         <Header />
 
         <Routes>

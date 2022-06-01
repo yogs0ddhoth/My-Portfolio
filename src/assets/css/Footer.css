@@ -12,6 +12,16 @@ div.footer > * {
   align-items: center;
 }
 
+ul {
+  justify-content: space-around;
+}
+
 .icon {
   line-height: 3rem;
+}
+
+@media screen and (min-width: 786px) {
+  ul {
+    justify-content: center;
+  }
 }
