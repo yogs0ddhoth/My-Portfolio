@@ -15,20 +15,20 @@ export const projectData = [
     img: gymDiary
   },
   {
-    name: "Blogme",
-    description: "A Full-Stack Blog",
-    technologies: "{SQL, MVC, ORM, API routing, Tempating}",
-    repoLink: "https://github.com/yogs0ddhoth/blogme",
-    deployedApp: "https://still-eyrie-26683.herokuapp.com/",
-    img: blogme
-  },
-  {
     name: "CineMatic",
     description: "A Movie Search Engine",
     technologies: "[ES6, JQuery/AJAX, Web API, Bootstrap]",
     repoLink: "https://github.com/tnoonan88/Cinematic-Film-Finder",
     deployedApp: "https://tnoonan88.github.io/Cinematic-Film-Finder/",
     img: cinematic
+  },
+  {
+    name: "Blogme",
+    description: "A Full-Stack Blog",
+    technologies: "{SQL, MVC, ORM, API routing, Tempating}",
+    repoLink: "https://github.com/yogs0ddhoth/blogme",
+    deployedApp: "https://still-eyrie-26683.herokuapp.com/",
+    img: blogme
   },
   {
     name: "Find Your Forecast",
