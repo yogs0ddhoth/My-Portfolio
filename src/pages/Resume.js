@@ -20,12 +20,16 @@ export default function Resume() {
       <div className='title col-12 flex-row align-start'>
         <h3 className='col-12'>Proficiencies:</h3>
         <ul className='col-12 '>
-          <li>sed do</li>
-          <li>eiusmod</li>
-          <li>tempor incididunt</li>
-          <li>ut labore</li>
-          <li>et dolore</li>
-          <li>magna aliqua</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>ES6+</li>
+          <li>SQL</li>
+          <li>Object Oriented Programing</li>
+          <li>Document Oriented Databases</li>
+          <li>GraphSQL</li>
+          <li>JS Libraries</li>
+          <li>React/JSX</li>
+          <li>MERN Stack</li>
         </ul>
       </div>
     </div>
