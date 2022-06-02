@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/My-Portfolio-Page/static/css/main.5b9ca37d.css",
+    "main.js": "/My-Portfolio-Page/static/js/main.b968143a.js",
+    "static/media/marek-piwnicki-ibc616VrRo4-unsplash.jpg": "/My-Portfolio-Page/static/media/marek-piwnicki-ibc616VrRo4-unsplash.04ea7bf853c320e9782a.jpg",
+    "static/media/Gym-Diary.png": "/My-Portfolio-Page/static/media/Gym-Diary.37100bd920624514d2f9.png",
+    "static/media/CineMatic.png": "/My-Portfolio-Page/static/media/CineMatic.c0823ac1d1875459b93a.png",
+    "static/media/under-construction.jpg": "/My-Portfolio-Page/static/media/under-construction.f07c97eadd20dceec5a0.jpg",
+    "static/media/Find-Your-Forecast.png": "/My-Portfolio-Page/static/media/Find-Your-Forecast.97e56cccdb94ad98245d.png",
+    "static/media/Ben-Lin-Resume.pdf": "/My-Portfolio-Page/static/media/Ben-Lin-Resume.1a2b06aa59ebcb5c67ec.pdf",
+    "static/media/blogme.png": "/My-Portfolio-Page/static/media/blogme.089e4f92c3ebd8bf22c4.png",
+    "index.html": "/My-Portfolio-Page/index.html",
+    "main.5b9ca37d.css.map": "/My-Portfolio-Page/static/css/main.5b9ca37d.css.map",
+    "main.b968143a.js.map": "/My-Portfolio-Page/static/js/main.b968143a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b9ca37d.css",
+    "static/js/main.b968143a.js"
+  ]
+}
