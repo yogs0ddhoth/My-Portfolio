@@ -2,12 +2,13 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import './assets/css/index.css';
 import './assets/css/style.css';
 import './assets/css/App.css';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           </a>
         </header>
       </div>
+      <Footer />
     </div>
   );
 }
