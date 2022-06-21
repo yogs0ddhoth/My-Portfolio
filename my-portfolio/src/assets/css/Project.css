@@ -1,0 +1,40 @@
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* .project {
+ 
+} */
+.project img {
+  opacity: 30%;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.9);
+  border-width: .4rem;
+  box-shadow: .4rem .4rem .2rem rgba(0, 0, 0, 0.85);
+}
+.project img:hover {
+  opacity: 100%;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.9);
+  border-width: .4rem;
+  box-shadow: .4rem .4rem .2rem rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+.project div {
+  float: left;
+  width: 66%;
+  position: relative;
+  bottom: 6rem;
+  
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+}
+.project div a {
+  text-decoration: underline;
+}
+.project div a:hover {
+  cursor: pointer;
+}
