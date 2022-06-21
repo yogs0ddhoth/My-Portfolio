@@ -9,6 +9,7 @@ import './assets/css/App.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import About from './pages/About';
 
 function App() {
   return (
@@ -29,6 +30,11 @@ function App() {
             Learn React
           </a>
         </header>
+
+        <Routes>
+          <Route path='/' element={<About />} />
+        </Routes>
+        
       </div>
       <Footer />
     </div>
