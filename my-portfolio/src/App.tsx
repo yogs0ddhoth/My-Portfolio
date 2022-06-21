@@ -9,6 +9,7 @@ import './assets/css/App.css';
 
 import Header from './components/Header';
 import About from './pages/About';
+import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Footer from './components/Footer';
 
@@ -20,7 +21,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<About />} />
-
+          <Route path='/contact' element={<Contact />} />
           <Route path='/resume' element={<Resume />} />
         </Routes>
         
