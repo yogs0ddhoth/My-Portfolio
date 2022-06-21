@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter as Router } from 'react-router-dom';
 import './index.css';
+import './assets/css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
