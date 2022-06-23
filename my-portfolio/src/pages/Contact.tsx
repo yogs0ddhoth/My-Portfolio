@@ -35,8 +35,8 @@ const reducer = (state: FormState, action: {type: string, payload?: string | boo
         return {...state, errors: {...state.errors, email: false}}
       // case "clear_errors": 
       //   return {...state, errors: {name: false, email: false, message: false}};
-      // case "reset":
-      //   return initialState;
+      case "reset":
+        return initialState;
       default: return state;
     }
   }
@@ -90,13 +90,13 @@ export const Contact = () => {
     }
   }, [formState.email]);
 
-  // useEffect(() => {
-  //   if (formState.selected.includes("message") && formState.message === "") {
-  //     dispatch({ type: "error_message", payload: true });
-  //   } else {
-  //     dispatch({ type: "error_message", payload: false });
-  //   }
-  // }, [formState.message]);
+  useEffect(() => {
+    if (formState.selected.includes("message") && formState.message === "") {
+      dispatch({ type: "error_message", payload: true });
+    } else {
+      dispatch({ type: "error_message", payload: false });
+    }
+  }, [formState.message]);
 
   const handleClick = (event:React.MouseEvent<HTMLDivElement | HTMLInputElement | HTMLTextAreaElement>) => { 
     const { id } = event.target as Element;
@@ -111,50 +111,37 @@ export const Contact = () => {
 
   const handleFormSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    dispatch({type: "clear_form"});
-
-    // if ( !([ formErr.name, formErr.email, formErr.message ].includes(true)) ) {
-    //   setFormState({ name: '', email: '', message: '' });
-    // };
+    if ( [formState.errors.name, formState.errors.email, formState.errors.message].filter(el => el === false).length === 3 ) {
+      dispatch({type: "reset"})
+    } else {
+      dispatch({type: "clear_form"});
+    }
   };
 
-  // const errStatus = (fieldState: string, errorState: string | boolean, htmlId: string) => {
-  //   if (
-  //     // err === true || (err === false && selectedState !== htmlId && state === '')
-  //     // formState.selected.includes(htmlId) && fieldState === ""
-  //   ) {
-  //     return <span className='error'>* This field is required.</span>
-  //   }
-  // };
+  const errStatus = (errorState: string | boolean, fieldState?: string, htmlId?: string) => {
+    if (errorState !== false) {
+      return <span className='error'> This field is required.</span>;
+    }
+  };
 
   const emailStatus = () => {
-    if (
-      // formErr.email === true || emailValid === false || (formErr.email === false && selected !== 'email' && emailValid === false)
-      formState.errors.email === "invalid"
-    ) {
-      return <span className='error'> Enter a valid email address.</span>
+    if (formState.errors.email === "invalid") {
+      return <span className='error'> Enter a valid email address.</span>;
     }
   }
 
   return (
-    <div 
-      onClick={handleClick} 
-      className='col-12 flex-row justify-center '
-    >
-      <h2 className='title col-12 col-md-9 text-center'>Contact Me</h2>
-
-      <form 
-        onSubmit={handleFormSubmit} 
-        className='col-12 col-md-9 col-lg-8 col-xl-7'
-      >
+    <div onClick={handleClick} className='col-12 flex-row justify-center '>
+      
+      <h2 className='title col-12 col-md-9 text-center'>
+        Contact Me
+      </h2>
+      <form onSubmit={handleFormSubmit} className='col-12 col-md-9 col-lg-8 col-xl-7'>
         <div className='col-12 flex-row justify-center'>
 
-          <label 
-            htmlFor='name' 
-            className='col-10 pb-1'
-          >
-            Name: 
-            {/* {errStatus(formState.name, formErr.name, selected, 'name')} */}
+          <label htmlFor='name' className='col-10 pb-1'>
+            Name: <span>*</span>
+            {errStatus(formState.errors.name)}
           </label>
           <input 
             placeholder='Name'
@@ -168,12 +155,9 @@ export const Contact = () => {
 
         <div className='col-12 flex-row justify-center'>
 
-          <label 
-           htmlFor='email' 
-            className='col-10 pb-1'
-          >
-            Email: 
-            {/* {errStatus(formState.email, formErr.email, selected, 'email')}  */}
+          <label htmlFor='email' className='col-10 pb-1'>
+            Email: <span>*</span>
+            {errStatus(formState.errors.email)} 
             {emailStatus()}
           </label>
           <input 
@@ -188,12 +172,9 @@ export const Contact = () => {
 
         <div className='col-12 flex-row justify-center'>
 
-          <label 
-            htmlFor='message' 
-            className='col-10 pb-1'
-          >
+          <label htmlFor='message' className='col-10 pb-1'>
             Message: 
-            {/* {errStatus(formState.message, formErr.message, selected, 'message')} */}
+            {errStatus(formState.errors.message)}
           </label>
           <textarea 
             // type='text'
@@ -206,8 +187,7 @@ export const Contact = () => {
         </div>
 
         <div className='col-12 pt-3 flex-row justify-center'>
-
-          <input className='col-10' type='submit' />
+          <button className='col-10' type='submit' />
         </div>
       </form>
     </div>
