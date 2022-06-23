@@ -4,7 +4,7 @@ import '../../assets/css/index.css';
 // import '../../assets/css/style.css';
 import '../../assets/css/Project.css';
 
-export default function Project(props: Project) {
+export default function Project(props: ProjectType) {
   return (
     <div className='project col-12 col-md-5'>
       <a href={props.deployedApp} className=''>
