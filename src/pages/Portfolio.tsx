@@ -6,9 +6,9 @@ import '../assets/css/Portfolio.css';
 import { ProjectType } from '../utils/Types';
 import Project from '../components/Project';
 
-const {projectData} = require('../assets/utils/project-data');
+import { projectData } from '../assets/utils/project-data';
 
-export default function Contact(props: {}) {
+export const Portfolio = (props: {}) => {
   console.log(projectData);
   return (
     <div className='portfolio col-12 flex-row'>

@@ -9,6 +9,7 @@ import './assets/css/App.css';
 
 import {Header} from './layout/Header';
 import {About} from './pages/About';
+import { Portfolio } from './pages/Portfolio';
 import {Contact} from './pages/Contact';
 import {Resume} from './pages/Resume';
 import {Footer} from './layout/Footer';
@@ -19,6 +20,7 @@ export const App = () => (
       <Header />
       <Routes>
         <Route path='/' element={<About />} />
+        <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/resume' element={<Resume />} />
       </Routes>
