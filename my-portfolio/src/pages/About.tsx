@@ -3,7 +3,7 @@ import React from 'react';
 import '../assets/css/index.css';
 import '../assets/css/style.css';
 
-export default function About() {
+export const About = () => {
   const imgStyle = { borderRadius: '50%' };
 
   return (
