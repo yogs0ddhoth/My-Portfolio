@@ -11,28 +11,41 @@ interface Form<Type> {
   message: Type;
 };
 interface FormState extends Form<string> {
-  errors: Form<boolean>;
+  selected: Array<string>
+  errors: Form<string | boolean>;
 }
 
 const initialState: FormState = {
   name: "", 
   email: "", 
   message: "", 
+  selected: [],
   errors: { 
     name: false, 
     email: false, 
     message: false 
   }
 };
-const reducer = (state: FormState, action: {type: string, payload?: string}) => {
+const reducer = (state: FormState, action: {type: string, payload?: string | boolean}): FormState => {
   if (action.payload === undefined) {
     switch (action.type) {
+      case "clear_form":
+        return {...state, name: "", email: "", message: ""};
+      case "clear_error_email":
+        return {...state, errors: {...state.errors, email: false}}
+      // case "clear_errors": 
+      //   return {...state, errors: {name: false, email: false, message: false}};
+      // case "reset":
+      //   return initialState;
+      default: return state;
+    }
+  }
+  if (action.payload === true || action.payload === false) {
+    switch (action.type) {
       case "error_name":
-        return {...state, errors: {...state.errors, name: !state.errors.name}};
-      case "error_email":
-        return {...state, errors: {...state.errors, email: !state.errors.email}};
+        return {...state, errors: {...state.errors, name: action.payload}};
       case "error_message":
-        return {...state, errors: {...state.errors, message: !state.errors.message}};
+        return {...state, errors: {...state.errors, message: action.payload}};
       default: return state;
     }
   }
@@ -43,84 +56,95 @@ const reducer = (state: FormState, action: {type: string, payload?: string}) => 
       return {...state, email: action.payload};
     case "message":
       return {...state, message: action.payload};
+    case "select":
+      if (state.selected.includes(action.payload)) {
+        return state;
+      } else {
+        return {...state, selected: [...state.selected, action.payload]};
+      }
+    case "error_email":
+      return {...state, errors: {...state.errors, email: action.payload}};
     default: return state;
-  }
+  } 
 };
 
-export default function Contact() {
+export const Contact = () => {
   const [formState, dispatch] = useReducer(reducer, initialState);
 
-  const [emailValid, setEmailValid] = useState('');
-  const [selected, setSelected] = useState('')
+  useEffect(() => {
+    if (formState.selected.includes("name") && formState.name === "") {
+      dispatch({ type: "error_name", payload: true });
+    } else {
+      dispatch({ type: "error_name", payload: false });
+    }
+  }, [formState.name]);
 
-  // const handleClick = (event:React.MouseEvent<HTMLDivElement>) => { // remove Err from input when clicked
-  //   const { id } = event.target;
-    
-  //   switch (id) {
-  //     case 'name':
-  //       setFormErr( {...formErr, name: false} ) ;
-  //       break;
-  //     case 'email':
-  //       setFormErr( {...formErr, email: false} );
-  //       break;
-  //     case 'message':
-  //       setFormErr( {...formErr, message: false} );
-  //       break;
+  useEffect(() => {
+    if (formState.email !== "") {
+
+      if (!/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(formState.email)) {
+        dispatch({ type: "error_email", payload: "invalid"});
+      } else {
+        dispatch({ type: "clear_error_email"})
+      }
+    }
+  }, [formState.email]);
+
+  // useEffect(() => {
+  //   if (formState.selected.includes("message") && formState.message === "") {
+  //     dispatch({ type: "error_message", payload: true });
+  //   } else {
+  //     dispatch({ type: "error_message", payload: false });
   //   }
-  //   setSelected(id);
-  // };
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { // save input data as states
-    console.log(event);
-    const { id, value } = event.target;
-    dispatch({type: id, payload: value});
-    
-    // switch (id) {
-    //   case 'name':
-    //     setFormState( {...formState, name: value} );
-    //     break;
-    //   case 'email':
-    //     setFormState( {...formState, email: value} );
-    //     setEmailValid(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(formState.email) ? true : false);
-    //     break;
-    //   case 'message':
-    //     setFormState( {...formState, message: value} );
-    //     break;
-    // }
-  };
-  // const handleFormSubmit = (event: React.SyntheticEvent) => {
-  //   event.preventDefault();
-  
-  //   setFormErr({ 
-  //     name: formState.name === '' ? true : null, 
-  //     email: formState.email === '' ? true : null, 
-  //     message: formState.message === '' ? true : null 
-  //   });
-  //   if ( !([ formErr.name, formErr.email, formErr.message ].includes(true)) ) {
-  //     setFormState({ name: '', email: '', message: '' });
-  //   };
-  // };
+  // }, [formState.message]);
 
-  // const errStatus = (state, err, selectedState, htmlId) => {
-  //   if (err === true || (err === false && selectedState !== htmlId && state === '')) {
+  const handleClick = (event:React.MouseEvent<HTMLDivElement | HTMLInputElement | HTMLTextAreaElement>) => { 
+    const { id } = event.target as Element;
+    if (id !== "") {
+      dispatch({type: "select", payload: id});
+    };
+  };
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = event.target;
+    dispatch({ type: id, payload: value });
+  };
+
+  const handleFormSubmit = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    dispatch({type: "clear_form"});
+
+    // if ( !([ formErr.name, formErr.email, formErr.message ].includes(true)) ) {
+    //   setFormState({ name: '', email: '', message: '' });
+    // };
+  };
+
+  // const errStatus = (fieldState: string, errorState: string | boolean, htmlId: string) => {
+  //   if (
+  //     // err === true || (err === false && selectedState !== htmlId && state === '')
+  //     // formState.selected.includes(htmlId) && fieldState === ""
+  //   ) {
   //     return <span className='error'>* This field is required.</span>
   //   }
   // };
 
-  // const emailStatus = () => {
-  //   if (formErr.email === true || emailValid === false || (formErr.email === false && selected !== 'email' && emailValid === false)) {
-  //     return <span className='error'>Enter a valid email address.</span>
-  //   }
-  // }
+  const emailStatus = () => {
+    if (
+      // formErr.email === true || emailValid === false || (formErr.email === false && selected !== 'email' && emailValid === false)
+      formState.errors.email === "invalid"
+    ) {
+      return <span className='error'> Enter a valid email address.</span>
+    }
+  }
 
   return (
     <div 
-      // onClick={handleClick} 
+      onClick={handleClick} 
       className='col-12 flex-row justify-center '
     >
       <h2 className='title col-12 col-md-9 text-center'>Contact Me</h2>
 
       <form 
-        // onSubmit={handleFormSubmit} 
+        onSubmit={handleFormSubmit} 
         className='col-12 col-md-9 col-lg-8 col-xl-7'
       >
         <div className='col-12 flex-row justify-center'>
@@ -129,12 +153,14 @@ export default function Contact() {
             htmlFor='name' 
             className='col-10 pb-1'
           >
-            {/* Name: {errStatus(formState.name, formErr.name, selected, 'name')} */}
+            Name: 
+            {/* {errStatus(formState.name, formErr.name, selected, 'name')} */}
           </label>
           <input 
+            placeholder='Name'
             type='text' 
             id='name' 
-            // value={formState.name} 
+            value={formState.name} 
             onChange={handleChange} 
             className='col-10' 
           />
@@ -146,9 +172,12 @@ export default function Contact() {
            htmlFor='email' 
             className='col-10 pb-1'
           >
-            {/* Email Address: {errStatus(formState.email, formErr.email, selected, 'email')} {emailStatus()} */}
+            Email: 
+            {/* {errStatus(formState.email, formErr.email, selected, 'email')}  */}
+            {emailStatus()}
           </label>
           <input 
+            placeholder='Email'
             type='text' 
             id='email' 
             value={formState.email} 
@@ -163,10 +192,12 @@ export default function Contact() {
             htmlFor='message' 
             className='col-10 pb-1'
           >
-            {/* Message: {errStatus(formState.message, formErr.message, selected, 'message')} */}
+            Message: 
+            {/* {errStatus(formState.message, formErr.message, selected, 'message')} */}
           </label>
           <textarea 
-            // type='text' 
+            // type='text'
+            placeholder='Message' 
             id='message' 
             value={formState.message} 
             onChange={handleChange} 
