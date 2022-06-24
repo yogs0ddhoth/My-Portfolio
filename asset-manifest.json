@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/My-Portfolio-Page/static/css/main.ace84820.css",
-    "main.js": "/My-Portfolio-Page/static/js/main.782c85b3.js",
-    "static/js/787.1cfef722.chunk.js": "/My-Portfolio-Page/static/js/787.1cfef722.chunk.js",
-    "static/media/marek-piwnicki-ibc616VrRo4-unsplash.jpg": "/My-Portfolio-Page/static/media/marek-piwnicki-ibc616VrRo4-unsplash.04ea7bf853c320e9782a.jpg",
-    "static/media/Gym-Diary.png": "/My-Portfolio-Page/static/media/Gym-Diary.37100bd920624514d2f9.png",
-    "static/media/CineMatic.png": "/My-Portfolio-Page/static/media/CineMatic.c0823ac1d1875459b93a.png",
-    "static/media/under-construction.jpg": "/My-Portfolio-Page/static/media/under-construction.f07c97eadd20dceec5a0.jpg",
-    "static/media/Find-Your-Forecast.png": "/My-Portfolio-Page/static/media/Find-Your-Forecast.97e56cccdb94ad98245d.png",
-    "static/media/blogme.png": "/My-Portfolio-Page/static/media/blogme.089e4f92c3ebd8bf22c4.png",
-    "index.html": "/My-Portfolio-Page/index.html",
-    "main.ace84820.css.map": "/My-Portfolio-Page/static/css/main.ace84820.css.map",
-    "main.782c85b3.js.map": "/My-Portfolio-Page/static/js/main.782c85b3.js.map",
-    "787.1cfef722.chunk.js.map": "/My-Portfolio-Page/static/js/787.1cfef722.chunk.js.map"
+    "main.css": "/My-Portfolio/static/css/main.972b9497.css",
+    "main.js": "/My-Portfolio/static/js/main.a16b14d1.js",
+    "static/js/787.48fbe5ec.chunk.js": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js",
+    "static/media/marek-piwnicki-ibc616VrRo4-unsplash.jpg": "/My-Portfolio/static/media/marek-piwnicki-ibc616VrRo4-unsplash.04ea7bf853c320e9782a.jpg",
+    "static/media/Gym-Diary.png": "/My-Portfolio/static/media/Gym-Diary.37100bd920624514d2f9.png",
+    "static/media/CineMatic.png": "/My-Portfolio/static/media/CineMatic.c0823ac1d1875459b93a.png",
+    "static/media/under-construction.jpg": "/My-Portfolio/static/media/under-construction.f07c97eadd20dceec5a0.jpg",
+    "static/media/Find-Your-Forecast.png": "/My-Portfolio/static/media/Find-Your-Forecast.97e56cccdb94ad98245d.png",
+    "static/media/blogme.png": "/My-Portfolio/static/media/blogme.089e4f92c3ebd8bf22c4.png",
+    "index.html": "/My-Portfolio/index.html",
+    "main.972b9497.css.map": "/My-Portfolio/static/css/main.972b9497.css.map",
+    "main.a16b14d1.js.map": "/My-Portfolio/static/js/main.a16b14d1.js.map",
+    "787.48fbe5ec.chunk.js.map": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ace84820.css",
-    "static/js/main.782c85b3.js"
+    "static/css/main.972b9497.css",
+    "static/js/main.a16b14d1.js"
   ]
 }
