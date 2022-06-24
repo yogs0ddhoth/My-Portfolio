@@ -1,9 +1,10 @@
-import gymDiary from '../images/Gym-Diary.png';
-import blogme from '../images/blogme.png';
-import cinematic from '../images/CineMatic.png';
-import findYourForecase from '../images/Find-Your-Forecast.png';
+const gymDiary = require('../assets/images/Gym-Diary.png');
+const blogme = require('../assets/images/blogme.png');
+const cinematic = require('../assets/images/CineMatic.png');
+const findYourForecase = require('../assets/images/Find-Your-Forecast.png');
+const underConstruction = require('../assets/images/under-construction.png');
 // import showWhatYouKnow from '../images/Show-What-You-Know.png';
-import underConstruction from '../images/under-construction.jpg';
+// import underConstruction from '../images/under-construction.jpg';
 
 export const projectData = [
   {
@@ -17,7 +18,7 @@ export const projectData = [
   {
     name: "CineMatic",
     description: "A Movie Search Engine",
-    technologies: "[ES6, JQuery/AJAX, Web API, Bootstrap]",
+    technologies: "[JQuery/AJAX, Web API, Bootstrap]",
     repoLink: "https://github.com/tnoonan88/Cinematic-Film-Finder",
     deployedApp: "https://tnoonan88.github.io/Cinematic-Film-Finder/",
     img: cinematic
