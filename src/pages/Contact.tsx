@@ -3,7 +3,7 @@ import React, { useState, useReducer, useEffect } from 'react';
 import '../assets/css/style.css';
 import '../assets/css/Contact.css'
 
-// import ContactForm from './contactForm';
+import ContactForm from '../components/Contact'
 
 interface Form<Type> {
   name: Type;
@@ -187,9 +187,11 @@ export const Contact = () => {
         </div>
 
         <div className='col-12 pt-3 flex-row justify-center'>
-          <button className='col-10' type='submit' />
+          <button className='col-10' type='submit'>Submit</button>
         </div>
       </form>
+
+      <ContactForm />
     </div>
   )
 };
