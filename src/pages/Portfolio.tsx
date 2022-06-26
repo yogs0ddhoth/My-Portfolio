@@ -14,12 +14,12 @@ import GitHub from '@mui/icons-material/GitHub';
 
 import useTheme from '@mui/material/styles/useTheme';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import '../assets/css/index.css';
-import '../assets/css/style.css';
-import '../assets/css/Portfolio.css';
+// import '../assets/css/index.css';
+// import '../assets/css/style.css';
+// import '../assets/css/Portfolio.css';
 
-import { ProjectType } from '../utils/Types';
-import Project from '../components/Project';
+// import { ProjectType } from '../utils/Types';
+// import Project from '../components/Project';
 
 import { projectData } from '../assets/utils/project-data';
 
