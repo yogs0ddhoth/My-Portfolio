@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-
+import { ChakraProvider } from '@chakra-ui/react';
 import logo from './logo.svg';
 // import './App.css';
 import './assets/css/index.css';
@@ -15,17 +15,19 @@ import {Resume} from './pages/Resume';
 import {Footer} from './layout/Footer';
 
 export const App = () => (
-  <div className="App theme-1">
-    <div className='contentWrap'>
-      <Header />
-      <Routes>
-        <Route path='/' element={<About />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/resume' element={<Resume />} />
-      </Routes>
-      
+  <ChakraProvider>
+    <div className="App theme-1">
+      <div className='contentWrap'>
+        <Header />
+        <Routes>
+          <Route path='/' element={<About />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/resume' element={<Resume />} />
+        </Routes>
+
+      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
+  </ChakraProvider>
 );
