@@ -4,11 +4,12 @@
   "private": true,
   "homepage": "https://yogs0ddhoth.github.io/My-Portfolio",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.2",
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@fontsource/average-sans": "^4.5.8",
-    "@fontsource/roboto": "^4.5.7",
+    "@fontsource/londrina-sketch": "^4.5.7",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
