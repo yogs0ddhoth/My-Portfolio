@@ -9,10 +9,10 @@ import {
   Button,
 } from '@chakra-ui/react';
 
-type Inputs = {
-  example: string,
-  exampleRequired: string,
-};
+// type Inputs = {
+//   example: string,
+//   exampleRequired: string,
+// };
 
 export default function ContactForm() {
   const {
@@ -33,6 +33,7 @@ export default function ContactForm() {
         <Input 
           id="name"
           placeholder="Enter your name..."
+          borderRadius={'sm'}
           { ...register("name", {required: "This field is required."}) } 
         />
         <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
@@ -43,6 +44,7 @@ export default function ContactForm() {
         <Input 
           id="email"
           placeholder="Enter an email..."
+          borderRadius={'sm'}
           { ...register("email",
               {
                 required: "This field is required.", 
@@ -62,11 +64,12 @@ export default function ContactForm() {
         <Textarea 
           id="message"
           placeholder="Leave a message..."
+          borderRadius={'sm'}
           {...register("message")} 
         />
       </FormControl>
 
-      <Button type="submit">Submit</Button>     
+      <Button type="submit" borderRadius={'sm'}>Submit</Button>     
     </form>
   )
 }
