@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Heading, Text } from '@chakra-ui/react';
+
 import '../../assets/css/style.css';
 import '../../assets/css/Navigation.css';
 
@@ -8,7 +10,7 @@ export const Navbar = () => (
     <ul className='flex-row'>
       <li>
         <NavLink to='/' className='theme-2'>
-          About
+          <Text as='h2' fontSize={'2xl'}>About</Text>
         </NavLink>
       </li>
       <li>
