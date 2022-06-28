@@ -13,13 +13,10 @@ import Box from '@mui/material/Box';
 import '../../assets/css/style.css';
 import '../../assets/css/Header.css';
 
-import hero from "../../assets/images/marek-piwnicki-ibc616VrRo4-unsplash.jpg";
-
 import { Navbar } from './Navbar';
 
 export const Header = () => (
   <div>
-    <img src={hero} alt="cover photo" className="hero"></img>
     <header 
       className='header theme-2 col-12 flex-row align-end pt-3'
     >
