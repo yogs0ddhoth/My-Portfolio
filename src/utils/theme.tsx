@@ -1,12 +1,15 @@
 import { extendTheme } from "@chakra-ui/react";
+import { createTheme } from "@mui/material/styles";
+import { create } from "@mui/material/styles/createTransitions";
 
-const theme = extendTheme(
+export const chakraTheme = extendTheme(
   {
     fonts: {
       heading: "'Londrina Sketch', 'cursive'",
-      mono: "'Average Sans', 'sans-serif'"
+      body: "'Average Sans', 'sans-serif'"
     }
   }
-)
+);
 
-export default theme;
+export const muiTheme = createTheme();
+ 

@@ -14,9 +14,10 @@ import GitHub from '@mui/icons-material/GitHub';
 
 import useTheme from '@mui/material/styles/useTheme';
 import useMediaQuery from '@mui/material/useMediaQuery';
-// import '../assets/css/index.css';
-// import '../assets/css/style.css';
-// import '../assets/css/Portfolio.css';
+
+import '../assets/css/index.css';
+import '../assets/css/style.css';
+import '../assets/css/Portfolio.css';
 
 // import { ProjectType } from '../utils/Types';
 // import Project from '../components/Project';
@@ -24,9 +25,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { projectData } from '../assets/utils/project-data';
 
 export const Portfolio = (props: {}) => {
+
   const theme = useTheme();
   const matchDownMd = useMediaQuery(theme.breakpoints.down("md")); // < 600px
   const matchUpLg = useMediaQuery(theme.breakpoints.up("lg")); // > 1200px
+
 
   console.log(projectData);
   return (
@@ -53,7 +56,8 @@ export const Portfolio = (props: {}) => {
 
     <ImageList 
       variant="masonry" 
-      cols={matchDownMd ? 1 : matchUpLg ? 3 : 2} gap={8}
+      cols={matchDownMd ? 1 : matchUpLg ? 3 : 2} 
+      gap={8}
       // sx={{ display: "grid", gridTemplateColumns:{xs: 3, md:4} }}
     >
       <ImageListItem key="Subheader">

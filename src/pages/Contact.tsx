@@ -192,12 +192,12 @@ export const Contact = () => {
     //     </div>
     //   </form>
 
-      <ChakraProvider>
+      <div>
         <h2 className='title col-12 col-md-9 text-center'>
           Contact Me
         </h2>
         <ContactForm />
-      </ChakraProvider>
+      </div>
     // </div>
   )
 };
