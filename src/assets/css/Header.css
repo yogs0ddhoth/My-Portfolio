@@ -1,19 +1,19 @@
-.header {
+/* .header {
   position:relative;
   bottom: 1.5rem;
-}
+} */
 
 .home:hover {
   text-decoration: none;
 }
 
-.hero {
+/* .hero {
   max-width: 100%;
   margin-bottom: 25px;
   background-size: cover;
   background-position: center;
   box-shadow: 0 .4rem .2rem rgba(0, 0, 0, 0.85);
-}
+} */
 
 h1 {
   /* color: black; */

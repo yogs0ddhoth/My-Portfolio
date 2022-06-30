@@ -29,7 +29,7 @@ import {Footer} from './layout/Footer';
 export default function App() {
   const theme = useTheme();
   const matchDownSm = useMediaQuery(theme.breakpoints.down(640));
-  const matchUpMd = useMediaQuery(theme.breakpoints.up(1024));
+  const matchUpLg = useMediaQuery(theme.breakpoints.up(1024));
 
   return (
     <div 
@@ -39,18 +39,26 @@ export default function App() {
       }
     >
       <div className='col-span-12'>
-        <Header matchDownSm={matchDownSm} matchUpLg={matchUpMd} />
+        <Header matchDownSm={matchDownSm} matchUpLg={matchUpLg} />
       </div>
         <div className='col-span-12 sm:col-span-11'>
           <Routes>
-            <Route path='/' element={<About />} />
-            <Route path='/portfolio' element={<Portfolio />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/resume' element={<Resume />} />
+            <Route path='/' 
+              element={<About />} 
+            />
+            <Route path='/portfolio' 
+              element={<Portfolio matchDownSm={matchDownSm} matchUpLg={matchUpLg} />} 
+            />
+            <Route path='/contact' 
+              element={<Contact />} 
+            />
+            <Route path='/resume' 
+              element={<Resume />} 
+            />
           </Routes>
         </div>
-        <div className='col-span-12 sm:col-span-1'>
-          <Footer />
+        <div className='col-span-12 lg:col-span-1'>
+          <Footer matchDownSm={matchDownSm} matchUpLg={matchUpLg} />
         </div>
     </div> 
   );
