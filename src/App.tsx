@@ -1,43 +1,58 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ChakraProvider } from '@chakra-ui/react';
-import { ThemeProvider } from '@mui/material/styles';
+
+import useTheme from '@mui/material/styles/useTheme';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 import logo from './logo.svg';
 // import './App.css';
 
+import "@fontsource/roboto"
+import "@fontsource/kolker-brush"
 import "@fontsource/londrina-sketch"
+import "@fontsource/rock-3d"
 import "@fontsource/average-sans";
-import { chakraTheme, muiTheme } from './utils/theme';
 
-import './assets/css/index.css';
+import background from "./assets/images/marek-piwnicki-ibc616VrRo4-unsplash.jpg";
+
+// import './assets/css/index.css';
 import './assets/css/style.css';
-import './assets/css/App.css';
+// import './assets/css/App.css';
 
-import {Header} from './layout/Header';
+import Header from './layout/Header';
 import About from './pages/About';
 import { Portfolio } from './pages/Portfolio';
 import {Contact} from './pages/Contact';
 import {Resume} from './pages/Resume';
 import {Footer} from './layout/Footer';
 
-export const App = () => (
-  <ThemeProvider theme={muiTheme}>
-    <ChakraProvider theme={chakraTheme}>
-    
-      <div className="App theme-1">
-        <div className='contentWrap'>
-          <Header />
+export default function App() {
+  const theme = useTheme();
+  const matchDownSm = useMediaQuery(theme.breakpoints.down(640));
+  const matchUpMd = useMediaQuery(theme.breakpoints.up(1024));
+
+  return (
+    <div 
+      className='grid grid-cols-12 min-h-screen relative min-w-full bg-cover' 
+      style={
+        { backgroundImage: `url(${background})` }
+      }
+    >
+      <div className='col-span-12'>
+        <Header matchDownSm={matchDownSm} matchUpLg={matchUpMd} />
+      </div>
+        <div className='col-span-12 sm:col-span-11'>
           <Routes>
             <Route path='/' element={<About />} />
             <Route path='/portfolio' element={<Portfolio />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/resume' element={<Resume />} />
           </Routes>
-
         </div>
-        <Footer />
-      </div>
-    
-    </ChakraProvider>
-  </ThemeProvider>
-);
+        <div className='col-span-12 sm:col-span-1'>
+          <Footer />
+        </div>
+    </div> 
+  );
+  
+}
