@@ -1,5 +1,5 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 
 import TextField from '@mui/material/TextField';
 import FormLabel from '@mui/material/FormLabel';
@@ -12,9 +12,10 @@ import Button from '@mui/material/Button';
 
 export default function ContactForm() {
   const {
-    register, 
-    handleSubmit, 
-    formState: { errors, isSubmitting }
+    handleSubmit,
+    reset,
+    control,
+    formState: { errors }
   } = useForm(
     { defaultValues: {name: "", email: "", message: ""} }
   );
@@ -28,13 +29,21 @@ export default function ContactForm() {
         required
         error={errors.name?.message !== undefined}
       >
-        <TextField 
-          id="name"
-          label="Name:"
-          color="primary"
-          // borderRadius={'sm'}
-          { ...register("name", {required: "This field is required."}) }
-          helperText={errors.name?.message}
+        <Controller
+          name="name"
+          control={control}
+          render={ ({field}) => {
+              return (
+                <TextField {...field} 
+                  label="Name:" color="primary" 
+                  helperText={errors.name?.message}
+                />
+              )
+            }
+          }
+          rules={
+            {required: "This field is required."}
+          }
         />
       </FormControl>
 
@@ -42,35 +51,48 @@ export default function ContactForm() {
         error={errors.email?.message !== undefined}
         required
       >
-        <TextField 
-          id="email"
-          label="Email:"
-          // borderRadius={'sm'}
-          { ...register("email",
-              {
-                required: "This field is required.", 
-                pattern: {
-                  value: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
-                  message: "Enter a valid email address."
-                } 
-              }
-            )
+        <Controller
+          name="email"
+          control={control}
+          render={
+            ({field}) => {
+              return (
+                <TextField {...field} 
+                  label="Email:" color="primary" 
+                  helperText={errors.email?.message}
+                />
+              )
+            }
           }
-          helperText={errors.email?.message} 
+          rules={
+            {pattern: {
+                value: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
+                message: "Enter a valid email address."
+              }
+            }
+          }
         />
       </FormControl>
 
       <FormControl>
-        <TextField 
-          id="message"
-          label="Message:"
-          multiline
-          // borderRadius={'sm'}
-          {...register("message")} 
+        <Controller
+          name="message"
+          control={control}
+          render={
+            ({field}) => {
+              return (
+                <TextField {...field} 
+                  label="Message:" color="primary" 
+                  multiline
+                />
+              )
+            }
+          }
         />
       </FormControl>
 
       <Button 
+        type="submit"
         variant="outlined" 
         // borderRadius={'sm'}
       >Submit</Button>     
