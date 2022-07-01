@@ -10,16 +10,15 @@ import IconButton from '@mui/material/IconButton';
 import ExitToApp from '@mui/icons-material/ExitToApp';
 import GitHub from '@mui/icons-material/GitHub';
 
-import '../assets/css/index.css';
+// import '../assets/css/index.css';
 import '../assets/css/style.css';
-import '../assets/css/Portfolio.css';
 
 // import { ProjectType } from '../utils/Types';
 // import Project from '../components/Project';
 
 import { projectData } from '../assets/utils/project-data';
 
-export const Portfolio = (props: {matchDownSm: boolean, matchUpLg: boolean}) => {
+export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => {
 
   console.log(projectData);
   return (
@@ -46,7 +45,7 @@ export const Portfolio = (props: {matchDownSm: boolean, matchUpLg: boolean}) => 
 
     <ImageList 
       variant="masonry" 
-      cols={props.matchDownSm ? 1 : props.matchUpLg ? 3 : 2} 
+      cols={props.matchDownMd ? 1 : props.matchUpLg ? 3 : 2} 
       gap={8}
       // sx={{ display: "grid", gridTemplateColumns:{xs: 3, md:4} }}
     >

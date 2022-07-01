@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 // import benLinResume from '../assets/resume/Ben-Lin-Resume.pdf';
-import '../assets/css/index.css';
+// import '../assets/css/index.css';
 import '../assets/css/style.css';
 
 export const Resume = () => (

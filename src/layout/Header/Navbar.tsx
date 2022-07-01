@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { Heading, Text } from '@chakra-ui/react';
 
 // import '../../assets/css/style.css';
-// import '../../assets/css/Navigation.css';
+import '../../assets/css/Navigation.css';
 
 export const Navbar = () => (
   // <nav className='col-12 col-md-auto row align-end'>
-    <ul className='flex-row'>
+    <ul className='flex flex-row'>
       <li>
         <NavLink to='/' className='theme-2 text-stone-50'>
           <Text as='h2' fontSize={'2xl'}

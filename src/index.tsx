@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter as Router } from 'react-router-dom';
 import './index.css';
-import './assets/css/index.css';
+// import './assets/css/index.css';
 import { chakraTheme, muiTheme } from './utils/theme';
 import { ThemeProvider } from '@mui/material/styles';
 import App from './App';

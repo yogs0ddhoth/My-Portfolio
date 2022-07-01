@@ -13,5 +13,10 @@ export const chakraTheme = extendTheme(
   }
 );
 
-export const muiTheme = createTheme();
+export const muiTheme = createTheme(
+  {palette: {
+      mode: "dark"
+    }
+  }
+);
  
