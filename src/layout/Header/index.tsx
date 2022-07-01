@@ -37,8 +37,8 @@ export default function Header() {
       >
         <MenuIcon 
           // color='primary'
-          className='text-stone-50'
-          fontSize={'inherit'}
+          className='text-stone-50 drop-shadow-icon'
+          fontSize={'large'}
         />
       </IconButton>
       <Menu

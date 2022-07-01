@@ -17,8 +17,7 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
     { href: "https://www.linkedin.com/in/ben-lin-b70a79227/", icon: faLinkedin }
   ];
   return (matchDownMd === true) ? (
-    <div 
-      className='
+    <div className='
         theme-2 
         w-full pt-3
         fixed bottom-0 left-0 
@@ -26,9 +25,8 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
       '
     >
       <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
+        direction="row" 
+        justifyContent="center" alignItems="center"
         spacing={3}
       >
         {
@@ -46,8 +44,7 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
     ) : (
     <Stack
       direction="column"
-      justifyContent="center"
-      alignItems="center"
+      justifyContent="center" alignItems="center"
       spacing={2}
     >
       {
