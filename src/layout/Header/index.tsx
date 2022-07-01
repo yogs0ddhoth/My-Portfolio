@@ -1,50 +1,67 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Heading } from '@chakra-ui/react';
 
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import { Typography } from '@mui/material';
-// import { MenuIcon } from '@chakra-ui/react';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 
 import '../../assets/css/style.css';
-import '../../assets/css/Header.css';
 
-import { Navbar } from './Navbar';
+export default function Header() {
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
 
-export default function Header(props: {matchDownSm: boolean, matchUpLg: boolean}) {
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget);
+  const handleClose = () => setAnchorEl(null);
 
+  const navigation = [
+    {item: "About", link: "/"},
+    {item: "Portfolio", link: "/portfolio"},
+    {item: "Contact", link: "/contact"},
+    {item: "Resume", link: "/resume"}
+  ]
   return (
-    <div>
-      <header 
-        className='relative grid-cols-12 flex flex-row justify-end pt-3 bottom-6'
+    <div className='relative'>
+      <IconButton
+        id="navigation-button"
+        aria-controls={ open ? 'navigation-menu' : undefined }
+        aria-haspopup="true"
+        aria-expanded={ open ? 'true' : undefined }
+        aria-label="menu"
+        onClick={handleClick}
+        className='text-6xl justify-self-end'
       >
-        {/* <NavLink to='/' className='home'>
-          <Heading as='h1' fontSize={'8xl'} 
-            className='theme-2 text-6xl text-stone-50 sm:text-center md:text-start md:w-a'
-            textShadow='0 5px 5px rgb(0 0 0 / 0.85)'
-          >Ben Lin</Heading>
-        </NavLink> */}
-          <IconButton
-            // size="large"
-            // edge="start"
-            // color="inherit"
-            aria-label="menu"
-            // sx={{ mr: 2 }}
-            className='text-6xl justify-self-end'
-          >
-            <MenuIcon 
-              // color='primary'
-              className='text-stone-50'
-              fontSize={'inherit'}
-            />
-          </IconButton>
-        <Navbar />
-      </header>
+        <MenuIcon 
+          // color='primary'
+          className='text-stone-50'
+          fontSize={'inherit'}
+        />
+      </IconButton>
+      <Menu
+        id="navigation-menu"
+        aria-labelledby="navigation-button"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        anchorOrigin={
+          {vertical: "top", horizontal: "left"}
+        }
+        transformOrigin={
+          {vertical: "top", horizontal: "left"}
+        }
+      >
+        {
+          navigation.map(nav => (
+            <NavLink to={nav.link} className='theme-2 text-stone-50'>
+              <MenuItem>{nav.item}</MenuItem>
+            </NavLink>
+          ))
+        }
+      </Menu>
     </div>
   )
 };
