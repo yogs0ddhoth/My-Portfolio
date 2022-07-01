@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import useTheme from '@mui/material/styles/useTheme';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import Typography from '@mui/material/Typography';
 import logo from './logo.svg';
 // import './App.css';
 
@@ -55,8 +56,12 @@ export default function App() {
       >
         <Header />
       </div>
-
-      <div className='col-span-12 row-span-5 md:col-span-11'>
+      
+      <div
+        className='
+        md:col-span-1'
+      ></div>
+      <div className='col-span-12 row-span-5 md:col-span-10'>
         <Routes>
           <Route path='/' element={<About />} />
           <Route path='/portfolio' element={<Portfolio matchDownMd={matchDownMd} matchUpLg={matchUpLg} />} />
@@ -71,6 +76,15 @@ export default function App() {
       >
         <Footer matchDownMd={matchDownMd} />
       </div>
+      <Typography variant='caption'
+        className='
+         text-stone-50 drop-shadow-icon
+          col-span-12 pl-3 pt-3 
+          md:absolute md:bottom-0
+        '
+      >
+        image courtesy of <a className='underline' href='https://unsplash.com/@marekpiwnicki'>Marek Piwnicki</a>
+      </Typography>
     </div> 
   );
 }

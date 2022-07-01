@@ -28,7 +28,6 @@ export default function ContactForm() {
         required
         error={errors.name?.message !== undefined}
       >
-        {/* <FormLabel htmlFor="name">Name: </FormLabel> */}
         <TextField 
           id="name"
           label="Name:"
@@ -43,7 +42,6 @@ export default function ContactForm() {
         error={errors.email?.message !== undefined}
         required
       >
-        {/* <FormLabel htmlFor="email">Email: </FormLabel> */}
         <TextField 
           id="email"
           label="Email:"
@@ -63,7 +61,6 @@ export default function ContactForm() {
       </FormControl>
 
       <FormControl>
-        {/* <FormLabel htmlFor="message">Message: </FormLabel> */}
         <TextField 
           id="message"
           label="Message:"

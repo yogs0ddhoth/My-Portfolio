@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 
@@ -8,6 +9,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 
 import '../../assets/css/style.css';
+
 
 export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
   const linksData = [
