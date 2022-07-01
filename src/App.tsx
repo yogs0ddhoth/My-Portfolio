@@ -34,40 +34,43 @@ export default function App() {
 
   return (
     <div 
-      className='grid grid-cols-12 min-h-screen relative min-w-full bg-cover' 
+      className='
+        min-h-screen min-w-full bg-cover 
+        relative 
+        grid grid-cols-12 justify-end
+      ' 
       style={
         { backgroundImage: `url(${background})` }
       }
     >
-      <div className='col-span-12'>
-        <Header matchDownSm={matchDownSm} matchUpLg={matchUpLg} />
+      <div className='
+          col-span-11 row-span-1 
+          flex flex-row justify-end
+        '
+      ></div>
+      <div className='
+          col-span-1 row-span-1 
+          flex flex-row justify-center items-center
+        '
+      >
+        <Header />
       </div>
-        <div className='col-span-12 md:col-span-11'>
-          <Routes>
-            <Route path='/' 
-              element={<About />} 
-            />
-            <Route path='/portfolio' 
-              element={
-                <Portfolio 
-                  matchDownMd={matchDownMd}
-                  matchUpLg={matchUpLg} 
-                />
-              } 
-            />
-            <Route path='/contact' 
-              element={<Contact />} 
-            />
-            <Route path='/resume' 
-              element={<Resume />} 
-            />
-          </Routes>
-        </div>
-        <div className='col-span-12 md:col-span-1'>
-          <Footer matchDownMd={matchDownMd} />
-        </div>
+
+      <div className='col-span-12 row-span-5 md:col-span-11'>
+        <Routes>
+          <Route path='/' element={<About />} />
+          <Route path='/portfolio' element={<Portfolio matchDownMd={matchDownMd} matchUpLg={matchUpLg} />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/resume' element={<Resume />} />
+        </Routes>
+      </div>
+      <div className='
+          col-span-12 row-span-5 md:col-span-1 
+          flex flex-col justify-center
+        '
+      >
+        <Footer matchDownMd={matchDownMd} />
+      </div>
     </div> 
-    
   );
-  
 }

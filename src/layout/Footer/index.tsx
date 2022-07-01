@@ -9,16 +9,21 @@ import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-
 
 import '../../assets/css/style.css';
 
-const linksData = [
-  { href: "mailto:blin7.webdev@gmail.com", icon: solid('envelope')},
-  { href: "https://github.com/yogs0ddhoth", icon: faGithub },
-  { href: "https://stackoverflow.com/users/17608484/blin", icon: faStackOverflow },
-  { href: "https://www.linkedin.com/in/ben-lin-b70a79227/", icon: faLinkedin }
-]
-export default function Footer(props: {matchDownMd: boolean}) {
-  return (props.matchDownMd === true) ? (
+export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
+  const linksData = [
+    { href: "mailto:blin7.webdev@gmail.com", icon: solid('envelope')},
+    { href: "https://github.com/yogs0ddhoth", icon: faGithub },
+    { href: "https://stackoverflow.com/users/17608484/blin", icon: faStackOverflow },
+    { href: "https://www.linkedin.com/in/ben-lin-b70a79227/", icon: faLinkedin }
+  ];
+  return (matchDownMd === true) ? (
     <div 
-      className='theme-2 w-full flex flex-row pt-3 fixed bottom-0 left-0 justify-center items-center'
+      className='
+        theme-2 
+        w-full pt-3
+        fixed bottom-0 left-0 
+        flex flex-row justify-center items-center
+      '
     >
       <Stack
         direction="row"
