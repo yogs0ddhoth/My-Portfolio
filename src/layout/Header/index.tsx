@@ -19,9 +19,8 @@ import { Navbar } from './Navbar';
 export default function Header(props: {matchDownSm: boolean, matchUpLg: boolean}) {
 
   return (
-    <div>2
+    <div>
       <header 
-        // className='header theme-2 col-12 flex-row align-end pt-3' 
         className='relative grid-cols-12 flex flex-row justify-end pt-3 bottom-6'
       >
         {/* <NavLink to='/' className='home'>
@@ -30,8 +29,6 @@ export default function Header(props: {matchDownSm: boolean, matchUpLg: boolean}
             textShadow='0 5px 5px rgb(0 0 0 / 0.85)'
           >Ben Lin</Heading>
         </NavLink> */}
-
-        {/* <div className='justify-end'> */}
           <IconButton
             // size="large"
             // edge="start"
@@ -46,9 +43,6 @@ export default function Header(props: {matchDownSm: boolean, matchUpLg: boolean}
               fontSize={'inherit'}
             />
           </IconButton>
-        {/* </div> */}
-
-
         <Navbar />
       </header>
     </div>

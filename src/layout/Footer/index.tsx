@@ -8,7 +8,6 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 
 import '../../assets/css/style.css';
-import '../../assets/css/Footer.css';
 
 const linksData = [
   { href: "mailto:blin7.webdev@gmail.com", icon: solid('envelope')},
@@ -18,7 +17,9 @@ const linksData = [
 ]
 export default function Footer(props: {matchDownMd: boolean}) {
   return (props.matchDownMd === true) ? (
-    <div className='footer theme-2 col-span-12 flex-row pt-3'>
+    <div 
+      className='theme-2 w-full flex flex-row pt-3 fixed bottom-0 left-0 justify-center items-center'
+    >
       <Stack
         direction="row"
         justifyContent="center"
