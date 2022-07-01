@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/index.css';
+// import '../assets/css/index.css';
 import '../assets/css/style.css';
 import '../assets/css/Portfolio.css';
 

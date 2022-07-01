@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import './assets/css/index.css';
+// import './assets/css/index.css';
 import './assets/css/style.css';
 import './assets/css/App.css';
 
