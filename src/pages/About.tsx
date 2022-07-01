@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Heading, Text } from '@chakra-ui/react';
 import Paper from '@mui/material/Paper';
+import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 // import avatar from '../images/avatar.png';
 // import '../assets/css/index.css';
@@ -11,8 +12,10 @@ export default function About() {
   
 
   return (
-    <div 
-      // className='col-12 flex-row'
+    <Card className=' 
+        opacity-95
+        col-span-12 row-span-4
+      '
     >
       <Typography variant='h1' 
       // className='title col-12 align-start'
@@ -27,6 +30,6 @@ export default function About() {
         <br />
         Crafting quality and intuitively coded applications.
       </Typography>
-    </div>
+    </Card>
   )
 };

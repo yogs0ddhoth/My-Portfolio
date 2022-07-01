@@ -7,7 +7,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import '../assets/css/style.css';
 
 export const Resume = () => (
-  <div className='col-12 flex-row'>
+  <div className='col-span-12 row-span-4'>
     <h2 className='title col-12'>
       My Resume:<a href={'../assets/resume/Ben-Lin-Resume.pdf'} download={Resume} className='title col-12 align-start'>
       {/* <FontAwesomeIcon icon={solid('p')} /> */}

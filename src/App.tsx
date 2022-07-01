@@ -38,30 +38,31 @@ export default function App() {
       className='
         min-h-screen min-w-full bg-cover 
         relative 
-        grid grid-cols-12 justify-end
+        grid grid-cols-12 grid-rows-6 justify-end
       ' 
       style={
         { backgroundImage: `url(${background})` }
       }
     >
-      <div className='
-          col-span-11 row-span-1 
-          flex flex-row justify-end
-        '
-      ></div>
+      <div className='col-span-11 row-span-1' />
       <div className='
           col-span-1 row-span-1 
-          flex flex-row justify-center items-center
+          flex flex-row justify-end items-center
         '
       >
         <Header />
       </div>
       
-      <div
+      {/* <div
         className='
         md:col-span-1'
-      ></div>
-      <div className='col-span-12 row-span-5 md:col-span-10'>
+      ></div> */}
+      <div className='
+          pl-3 pr-3 
+          col-span-12 row-span-4 md:col-span-11
+          grid grid-cols-12 justify-start
+        '
+      >
         <Routes>
           <Route path='/' element={<About />} />
           <Route path='/portfolio' element={<Portfolio matchDownMd={matchDownMd} matchUpLg={matchUpLg} />} />
@@ -76,15 +77,21 @@ export default function App() {
       >
         <Footer matchDownMd={matchDownMd} />
       </div>
-      <Typography variant='caption'
-        className='
-         text-stone-50 drop-shadow-icon
-          col-span-12 pl-3 pt-3 
-          md:absolute md:bottom-0
-        '
-      >
-        image courtesy of <a className='underline' href='https://unsplash.com/@marekpiwnicki'>Marek Piwnicki</a>
-      </Typography>
+      {
+        matchDownMd === false ? (
+          <Typography variant='caption'
+            className='
+             text-stone-50 drop-shadow-icon
+              col-span-12 pl-3 pt-3 pb-3 md:pb-0
+              md:absolute md:bottom-0
+            '
+          >
+            image courtesy of <a className='underline' href='https://unsplash.com/@marekpiwnicki'>Marek Piwnicki</a>
+          </Typography>
+        ) : (
+          <></>
+        )
+      }
     </div> 
   );
 }
