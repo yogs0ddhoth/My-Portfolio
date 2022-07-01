@@ -1,3 +1,4 @@
+import Quizmaster from '../images/QuizMaster.png';
 import gymDiary from '../images/Gym-Diary.png';
 import blogme from '../images/blogme.png';
 import cinematic from '../images/CineMatic.png';
@@ -7,8 +8,16 @@ import underConstruction from '../images/under-construction.jpg';
 
 export const projectData = [
   {
+    name: "Quizmaster",
+    description: "A Trivia Question Exchange",
+    technologies: "MERN Stack, Semantic UI React Library, Stripe Payment Services API",
+    repoLink: "https://github.com/yogs0ddhoth/QuizMaster",
+    deployedApp: "https://polar-island-54317.herokuapp.com",
+    img: gymDiary
+  },
+  {
     name: "Gym Diary",
-    description: "A Full-Stack Workout Tracking App",
+    description: "A Workout Tracking App",
     technologies: "{SQL, MVC, ORM, API routing}",
     repoLink: "https://github.com/ItzDerian/gym-diary",
     deployedApp: "https://tranquil-reaches-54677.herokuapp.com",
