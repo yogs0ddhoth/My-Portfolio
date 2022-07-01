@@ -6,6 +6,8 @@ export const chakraTheme = extendTheme(
   {
     fonts: {
       heading: "'Londrina Sketch', 'cursive'",
+      // heading: "'Kolker Brush', 'cursive'",
+      // heading: "'Rock 3d', 'cursive'",
       body: "'Average Sans', 'sans-serif'"
     }
   }
