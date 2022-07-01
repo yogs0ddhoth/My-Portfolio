@@ -1,14 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { 
-  FormErrorMessage, 
-  FormLabel,
-  FormControl,
-  Input,
-  Textarea,
-  Button,
-} from '@chakra-ui/react';
 
+import TextField from '@mui/material/TextField';
+import FormLabel from '@mui/material/FormLabel';
+import FormControl from '@mui/material/FormControl';
+import Button from '@mui/material/Button';
 // type Inputs = {
 //   example: string,
 //   exampleRequired: string,
@@ -28,23 +24,30 @@ export default function ContactForm() {
   return (
     <form onSubmit={ handleSubmit((data) => console.log(data)) }>
       
-      <FormControl isInvalid={errors.name?.message !== undefined}>
-        <FormLabel htmlFor="name">Name: </FormLabel>
-        <Input 
+      <FormControl 
+        required
+        error={errors.name?.message !== undefined}
+      >
+        {/* <FormLabel htmlFor="name">Name: </FormLabel> */}
+        <TextField 
           id="name"
-          placeholder="Enter your name..."
-          borderRadius={'sm'}
-          { ...register("name", {required: "This field is required."}) } 
+          label="Name:"
+          color="primary"
+          // borderRadius={'sm'}
+          { ...register("name", {required: "This field is required."}) }
+          helperText={errors.name?.message}
         />
-        <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
       </FormControl>
 
-      <FormControl isInvalid={errors.email?.message !== undefined}>
-        <FormLabel htmlFor="email">Email: </FormLabel>
-        <Input 
+      <FormControl 
+        error={errors.email?.message !== undefined}
+        required
+      >
+        {/* <FormLabel htmlFor="email">Email: </FormLabel> */}
+        <TextField 
           id="email"
-          placeholder="Enter an email..."
-          borderRadius={'sm'}
+          label="Email:"
+          // borderRadius={'sm'}
           { ...register("email",
               {
                 required: "This field is required.", 
@@ -54,22 +57,26 @@ export default function ContactForm() {
                 } 
               }
             )
-          } 
+          }
+          helperText={errors.email?.message} 
         />
-        <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
       </FormControl>
 
       <FormControl>
-        <FormLabel htmlFor="message">Message: </FormLabel>
-        <Textarea 
+        {/* <FormLabel htmlFor="message">Message: </FormLabel> */}
+        <TextField 
           id="message"
-          placeholder="Leave a message..."
-          borderRadius={'sm'}
+          label="Message:"
+          multiline
+          // borderRadius={'sm'}
           {...register("message")} 
         />
       </FormControl>
 
-      <Button type="submit" borderRadius={'sm'}>Submit</Button>     
+      <Button 
+        variant="outlined" 
+        // borderRadius={'sm'}
+      >Submit</Button>     
     </form>
   )
 }

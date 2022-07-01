@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heading, Text } from '@chakra-ui/react';
+import Paper from '@mui/material/Paper';
 // import avatar from '../images/avatar.png';
 // import '../assets/css/index.css';
 import '../assets/css/style.css';

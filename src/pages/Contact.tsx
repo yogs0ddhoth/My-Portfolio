@@ -1,10 +1,10 @@
 import React, { useState, useReducer, useEffect } from 'react';
 
 import '../assets/css/style.css';
-import '../assets/css/Contact.css'
+
 
 import ContactForm from '../components/Contact'
-import { ChakraProvider } from '@chakra-ui/react';
+
 
 // interface Form<Type> {
 //   name: Type;
