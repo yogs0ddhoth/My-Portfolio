@@ -8,13 +8,16 @@ import ContactForm from '../components/Contact'
 
 export const Contact = () => (
   <Card className='
-      opacity-95
-      col-span-12 row-span-5
+      opacity-95 drop-shadow-icon
+      col-span-10
+      grid grid-cols-10 grid-rows-7 justify-center
     '
   >
-    <h2 className='title col-span-12 text-center'>
-      Contact Me
-    </h2>
-    <ContactForm />
+      <Typography variant='h1' 
+        className='col-span-10'
+      >
+        Contact Me
+      </Typography>
+    {/* <ContactForm /> */}
   </Card>
 );

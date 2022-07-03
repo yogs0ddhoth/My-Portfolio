@@ -24,7 +24,7 @@ export default function ContactForm() {
 
   return (
     <form className="
-        col-span-12
+        col-span-10
         grid grid-cols-12 grid-rows-6 justify-center
       "
       onSubmit={ handleSubmit((data) => console.log(data)) }

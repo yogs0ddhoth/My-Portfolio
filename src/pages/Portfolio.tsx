@@ -22,7 +22,7 @@ export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => 
 
   console.log(projectData);
   return (
-    <div className='col-span-12 row-span-4'>
+    <div className='col-span-10'>
       <ImageList 
         variant="masonry" 
         cols={props.matchDownMd ? 1 : props.matchUpLg ? 3 : 2} 

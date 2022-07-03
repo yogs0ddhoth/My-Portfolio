@@ -55,9 +55,9 @@ export default function App() {
         md:col-span-1'
       ></div> */}
       <div className='
-          pl-3 pr-3 pb-5
-          col-span-12 row-span-4 md:col-span-11
-          grid grid-cols-12 justify-start
+          pl-3 pr-3 md:pr-0 pb-9
+          col-span-12 md:col-span-11
+          grid grid-cols-10 justify-start
         '
       >
         <Routes>
