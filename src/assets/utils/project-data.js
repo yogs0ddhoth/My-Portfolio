@@ -1,9 +1,9 @@
-import Quizmaster from '../images/QuizMaster.png';
+import quizmaster from '../images/Quizmaster.png';
 import gymDiary from '../images/Gym-Diary.png';
 import blogme from '../images/blogme.png';
 import cinematic from '../images/CineMatic.png';
 import findYourForecase from '../images/Find-Your-Forecast.png';
-// import showWhatYouKnow from '../images/Show-What-You-Know.png';
+import showWhatYouKnow from '../images/Show-What-You-Know.png';
 import underConstruction from '../images/under-construction.jpg';
 
 export const projectData = [
@@ -13,12 +13,12 @@ export const projectData = [
     technologies: "MERN Stack, Semantic UI React Library, Stripe Payment Services API",
     repoLink: "https://github.com/yogs0ddhoth/QuizMaster",
     deployedApp: "https://polar-island-54317.herokuapp.com",
-    img: gymDiary
+    img: quizmaster
   },
   {
     name: "Gym Diary",
     description: "A Workout Tracking App",
-    technologies: "{SQL, MVC, ORM, API routing}",
+    technologies: "{Express.js, MySQL, Sequelize ORM, REST APIs}",
     repoLink: "https://github.com/ItzDerian/gym-diary",
     deployedApp: "https://tranquil-reaches-54677.herokuapp.com",
     img: gymDiary
@@ -34,7 +34,7 @@ export const projectData = [
   {
     name: "Blogme",
     description: "A Full-Stack Blog",
-    technologies: "{SQL, MVC, ORM, API routing, Tempating}",
+    technologies: "{Express.js, MySQL, Sequelize ORM, REST APIs, Handlebar Tempating}",
     repoLink: "https://github.com/yogs0ddhoth/blogme",
     deployedApp: "https://still-eyrie-26683.herokuapp.com/",
     img: blogme
