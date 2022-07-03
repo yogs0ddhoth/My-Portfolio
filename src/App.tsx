@@ -16,9 +16,7 @@ import "@fontsource/average-sans";
 
 import background from "./assets/images/marek-piwnicki-ibc616VrRo4-unsplash.jpg";
 
-// import './assets/css/index.css';
 import './assets/css/style.css';
-// import './assets/css/App.css';
 
 import Header from './layout/Header';
 import About from './pages/About';
@@ -34,20 +32,19 @@ export default function App() {
   const matchUpLg = useMediaQuery(theme.breakpoints.up(1024));
 
   return (
-    <div 
-      className='
+    <div className='
         min-h-screen min-w-full bg-cover 
         relative 
-        grid grid-cols-12 grid-rows-6 justify-end
+        grid grid-cols-12 justify-end
       ' 
       style={
         { backgroundImage: `url(${background})` }
       }
     >
-      <div className='col-span-11 row-span-1' />
+      <div className='col-span-11' />
       <div className='
-          col-span-1 row-span-1 
-          flex flex-row justify-end items-center
+          col-span-1 
+          flex flex-row justify-center items-center
         '
       >
         <Header />
@@ -58,7 +55,7 @@ export default function App() {
         md:col-span-1'
       ></div> */}
       <div className='
-          pl-3 pr-3 
+          pl-3 pr-3 pb-5
           col-span-12 row-span-4 md:col-span-11
           grid grid-cols-12 justify-start
         '
@@ -71,6 +68,7 @@ export default function App() {
         </Routes>
       </div>
       <div className='
+          pt-8 md:pt-0
           col-span-12 row-span-5 md:col-span-1 
           flex flex-col justify-center
         '

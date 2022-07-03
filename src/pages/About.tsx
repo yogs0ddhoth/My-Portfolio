@@ -14,7 +14,7 @@ export default function About() {
   return (
     <Card className=' 
         opacity-95
-        col-span-12 row-span-4
+        col-span-12 row-span-5
       '
     >
       <Typography variant='h1' 

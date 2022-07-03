@@ -22,72 +22,53 @@ export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => 
 
   console.log(projectData);
   return (
-    // <div className='portfolio col-12 flex-row'>
-
-    //   <h2 className='title col-12 pb-2 align-start'>My Work</h2>
-    //   <div className='projects align-start flex-row justify-center '>
-    //     {
-    //       projectData.map(
-    //         (project: ProjectType) => (
-    //           <Project 
-    //           name={project.name}
-    //           description={project.description}
-    //           technologies={project.technologies}
-    //           repoLink={project.repoLink}
-    //           deployedApp={project.deployedApp}
-    //           img={project.img}
-    //           />
-    //         )
-    //       )
-    //     }
-    //   </div>
-    // </div>
-
-    <ImageList 
-      variant="masonry" 
-      cols={props.matchDownMd ? 1 : props.matchUpLg ? 3 : 2} 
-      gap={8}
-      // sx={{ display: "grid", gridTemplateColumns:{xs: 3, md:4} }}
-    >
-      <ImageListItem key="Subheader">
-        <div>My Work</div>
-      </ImageListItem>
-      {
-        projectData.map(project => (
-          <ImageListItem key={project.img}>
-            <img
-              src={`${project.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${project.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={project.name}
-            />
-            <ImageListItemBar
-              title={
-                <a href={project.deployedApp}>
-                  {project.name}
-                </a>
-              }
-              subtitle={
-                <div>
-                  <p>{project.description}</p>
-                  <p>{project.technologies}</p>
-                </div>
-              }
-              sx={{ whiteSpace: "normal"}}
-              actionIcon={
-                <IconButton
-                  sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                  // aria-label={`info about ${project.title}`}
-                >
+    <div className='col-span-12 row-span-4'>
+      <ImageList 
+        variant="masonry" 
+        cols={props.matchDownMd ? 1 : props.matchUpLg ? 3 : 2} 
+        gap={8}
+        // sx={{ display: "grid", gridTemplateColumns:{xs: 3, md:4} }}
+      >
+        <ImageListItem key="Subheader">
+          <div>My Work</div>
+        </ImageListItem>
+        {
+          projectData.map(project => (
+            <ImageListItem key={project.img}>
+              <img
+                src={`${project.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${project.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={project.name}
+              />
+              <ImageListItemBar
+                title={
                   <a href={project.deployedApp}>
-                    <GitHub />
+                    {project.name}
                   </a>
-                </IconButton>
-              }
-              actionPosition="right"
-            />
-          </ImageListItem>
-        ))
-      }
-    </ImageList>
+                }
+                subtitle={
+                  <div>
+                    <p>{project.description}</p>
+                    <p>{project.technologies}</p>
+                  </div>
+                }
+                sx={{ whiteSpace: "normal"}}
+                actionIcon={
+                  <IconButton
+                    sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                    // aria-label={`info about ${project.title}`}
+                  >
+                    <a href={project.deployedApp}>
+                      <GitHub />
+                    </a>
+                  </IconButton>
+                }
+                actionPosition="right"
+              />
+            </ImageListItem>
+          ))
+        }
+      </ImageList>
+    </div>
   )
 };

@@ -23,9 +23,17 @@ export default function ContactForm() {
   console.log(errors);
 
   return (
-    <form onSubmit={ handleSubmit((data) => console.log(data)) }>
+    <form className="
+        col-span-12
+        grid grid-cols-12 grid-rows-6 justify-center
+      "
+      onSubmit={ handleSubmit((data) => console.log(data)) }
+    >
       
       <FormControl 
+        className="
+          col-span-8
+        " 
         required
         error={errors.name?.message !== undefined}
       >
@@ -35,7 +43,7 @@ export default function ContactForm() {
           render={ ({field}) => {
               return (
                 <TextField {...field} 
-                  label="Name:" color="primary" 
+                  label="Name:" color="primary"
                   helperText={errors.name?.message}
                 />
               )
@@ -47,7 +55,10 @@ export default function ContactForm() {
         />
       </FormControl>
 
-      <FormControl 
+      <FormControl
+          className="
+          col-span-8
+        "  
         error={errors.email?.message !== undefined}
         required
       >
@@ -74,7 +85,9 @@ export default function ContactForm() {
         />
       </FormControl>
 
-      <FormControl>
+      <FormControl className="
+          col-span-8
+        " >
         <Controller
           name="message"
           control={control}
