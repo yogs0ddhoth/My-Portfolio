@@ -9,6 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 import '../../assets/css/style.css';
 
 export default function Header() {
@@ -35,11 +38,12 @@ export default function Header() {
         onClick={handleClick}
         className='text-6xl justify-self-end'
       >
-        <MenuIcon 
+        {/* <MenuIcon 
           // color='primary'
           className='text-stone-50 drop-shadow-icon'
           fontSize={'large'}
-        />
+        /> */}
+        <FontAwesomeIcon className="fa-lg drop-shadow-icon" icon={faBars} />
       </IconButton>
       <Menu
         id="navigation-menu"
