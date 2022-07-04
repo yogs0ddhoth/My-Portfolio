@@ -27,6 +27,7 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
       '
     >
       <Stack
+        className='pb-6'
         direction="row" 
         justifyContent="center" alignItems="center"
         spacing={3}
@@ -42,6 +43,17 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
           ))
         }
       </Stack>
+      <Typography variant='caption'
+        className='
+         text-stone-50 drop-shadow-icon
+          col-span-12 
+          absolute bottom-0
+        '
+      >
+        image courtesy of <a 
+          className='underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'
+        >Marek Piwnicki</a>
+      </Typography>
     </div>
     ) : (
     <Stack
