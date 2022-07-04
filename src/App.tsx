@@ -64,7 +64,7 @@ export default function App() {
           <Route path='/' element={<About />} />
           <Route path='/portfolio' element={<Portfolio matchDownMd={matchDownMd} matchUpLg={matchUpLg} />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/resume' element={<Resume />} />
+          <Route path='/resume' element={<Resume matchDownSm={matchDownSm} />} />
         </Routes>
       </div>
       <div className='
@@ -80,11 +80,13 @@ export default function App() {
           <Typography variant='caption'
             className='
              text-stone-50 drop-shadow-icon
-              col-span-12 pl-3 pt-3 pb-3 md:pb-0
-              md:absolute md:bottom-0
+              col-span-12 pl-5 pt-3 pb-3
+              absolute bottom-4
             '
           >
-            image courtesy of <a className='underline' href='https://unsplash.com/@marekpiwnicki'>Marek Piwnicki</a>
+            image courtesy of <a 
+              className='underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'
+            >Marek Piwnicki</a>
           </Typography>
         ) : (
           <></>

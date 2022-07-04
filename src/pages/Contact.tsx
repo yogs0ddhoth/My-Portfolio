@@ -10,11 +10,11 @@ export const Contact = () => (
   <Card className='
       opacity-95 drop-shadow-icon
       col-span-10
-      grid grid-cols-10 grid-rows-7 justify-center
+      grid grid-cols-12 grid-rows-12 justify-center
     '
   >
       <Typography variant='h1' 
-        className='col-span-10'
+        className='pl-3 col-span-12 row-span-2'
       >
         Contact Me
       </Typography>

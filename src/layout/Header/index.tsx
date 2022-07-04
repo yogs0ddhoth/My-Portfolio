@@ -45,7 +45,7 @@ export default function Header() {
         /> */}
         <FontAwesomeIcon className="fa-lg drop-shadow-icon" icon={faBars} />
       </IconButton>
-      <Menu
+      <Menu className='opacity-95'
         id="navigation-menu"
         aria-labelledby="navigation-button"
         anchorEl={anchorEl}

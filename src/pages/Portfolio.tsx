@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Card from '@mui/material/Card';
+import Typography from '@mui/material/Typography';
+
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -22,15 +25,23 @@ export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => 
 
   console.log(projectData);
   return (
-    <div className='col-span-10'>
+    <div className='col-span-12'>
       <ImageList 
         variant="masonry" 
         cols={props.matchDownMd ? 1 : props.matchUpLg ? 3 : 2} 
         gap={8}
         // sx={{ display: "grid", gridTemplateColumns:{xs: 3, md:4} }}
       >
-        <ImageListItem key="Subheader">
-          <div>My Work</div>
+        <ImageListItem key="Subheader" className='w-full'>
+          <Card className='
+              opacity-95 drop-shadow-icon
+              flex flex-row justify-center
+            '
+          >
+            <Typography variant={'h2'} >
+              My Work
+            </Typography>
+          </Card>
         </ImageListItem>
         {
           projectData.map(project => (
