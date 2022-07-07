@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Heading, Text } from '@chakra-ui/react';
 
 // import '../../assets/css/style.css';
 import '../../assets/css/Navigation.css';
@@ -10,30 +9,30 @@ export const Navbar = () => (
     <ul className='flex flex-row'>
       <li>
         <NavLink to='/' className='theme-2 text-stone-50'>
-          <Text as='h2' fontSize={'2xl'}
+          {/* <Text as='h2' fontSize={'2xl'}
             textShadow='0 4px 4px rgb(0 0 0 / 0.95)'
-          >About</Text>
+          >About</Text> */}
         </NavLink>
       </li>
       <li>
         <NavLink to='/portfolio' className='theme-2 text-stone-50'>
-          <Text as='h2' fontSize={'2xl'}
+          {/* <Text as='h2' fontSize={'2xl'}
             textShadow='0 4px 4px rgb(0 0 0 / 0.95)'
-          >Portfolio</Text>
+          >Portfolio</Text> */}
         </NavLink>
       </li>
       <li>
         <NavLink to='/contact' className='theme-2 text-stone-50'>
-          <Text as='h2' fontSize={'2xl'}
+          {/* <Text as='h2' fontSize={'2xl'}
             textShadow='0 4px 4px rgb(0 0 0 / 0.95)'
-          >Contact</Text>
+          >Contact</Text> */}
         </NavLink>
       </li>
       <li>
         <NavLink to='/resume' className='theme-2 text-stone-50'>
-          <Text as='h2' fontSize={'2xl'}
+          {/* <Text as='h2' fontSize={'2xl'}
             textShadow='0 4px 4px rgb(0 0 0 / 0.95)'
-          >Resume</Text>
+          >Resume</Text> */}
         </NavLink>
       </li>
     </ul>
