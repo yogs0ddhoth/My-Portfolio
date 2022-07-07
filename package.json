@@ -4,8 +4,6 @@
   "private": true,
   "homepage": "https://yogs0ddhoth.github.io/My-Portfolio",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.2",
-    "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@fontsource/average-sans": "^4.5.8",
