@@ -1,24 +1,13 @@
-import React from 'react';
-
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-
-import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 
-import ExitToApp from '@mui/icons-material/ExitToApp';
 import GitHub from '@mui/icons-material/GitHub';
-
-// import '../assets/css/index.css';
 import '../assets/css/style.css';
-
-// import { ProjectType } from '../utils/Types';
-// import Project from '../components/Project';
-
 import { projectData } from '../assets/utils/project-data';
 
 export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => {

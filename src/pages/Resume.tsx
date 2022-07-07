@@ -1,16 +1,9 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import VerticalTabs from '../components/Resume'
 import benLinResume from '../assets/resume/Ben-Lin-Resume.pdf';
 
-// import '../assets/css/index.css';
 import '../assets/css/style.css';
 
 export const Resume = ({matchDownSm}: {matchDownSm: boolean}) => (

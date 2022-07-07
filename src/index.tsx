@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter as Router } from 'react-router-dom';
 import './index.css';
-// import './assets/css/index.css';
 import "@fontsource/roboto";
 import { darkTheme } from './utils/theme';
 import { ThemeProvider } from '@mui/material/styles';

@@ -1,9 +1,6 @@
-import React, { useState, useReducer, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
-// import '../assets/css/style.css';
-
 import ContactForm from '../components/Contact'
 
 export const Contact = () => (

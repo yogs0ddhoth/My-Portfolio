@@ -1,10 +1,6 @@
-import React from 'react';
-// import { Heading, Text } from '@chakra-ui/react';
-import Paper from '@mui/material/Paper';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-// import avatar from '../images/avatar.png';
-// import '../assets/css/index.css';
+
 import '../assets/css/style.css';
 
 export default function About() {

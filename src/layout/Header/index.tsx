@@ -2,12 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import IconButton from '@mui/material/IconButton';
-import { Typography } from '@mui/material';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';

@@ -5,8 +5,6 @@ import useTheme from '@mui/material/styles/useTheme';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import Typography from '@mui/material/Typography';
-import logo from './logo.svg';
-// import './App.css';
 
 import "@fontsource/roboto"
 import "@fontsource/kolker-brush"
