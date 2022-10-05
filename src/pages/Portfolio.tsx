@@ -7,8 +7,10 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 
 import GitHub from '@mui/icons-material/GitHub';
-import '../assets/css/style.css';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+// import '../assets/css/style.css';
 import { projectData } from '../assets/utils/project-data';
+import { Tooltip } from '@mui/material';
 
 export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => {
 
@@ -27,7 +29,7 @@ export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => 
               flex flex-row justify-center
             '
           >
-            <Typography variant={'h2'} >
+            <Typography variant='h2' >
               My Work
             </Typography>
           </Card>
@@ -42,26 +44,50 @@ export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => 
               />
               <ImageListItemBar
                 title={
-                  <a href={project.deployedApp}>
-                    {project.name}
-                  </a>
+                  <Tooltip placement='bottom-start'
+                    title={
+                      <a href={project.deployedApp}
+                        className='hover:underline'
+                      >
+                        Link to Deployed App
+                      </a>
+                    }
+                  >
+                    <a href={project.deployedApp}>
+                      <Typography variant='h5'
+                        className='hover:underline'
+                      >
+                        {project.name}
+                      </Typography>
+                    </a>
+                  </Tooltip>
                 }
                 subtitle={
                   <div>
-                    <p>{project.description}</p>
-                    <p>{project.technologies}</p>
+                    <Typography variant='subtitle1'>{project.description}</Typography>
+                    <Typography variant='subtitle2'>{project.technologies}</Typography>
                   </div>
                 }
                 sx={{ whiteSpace: "normal"}}
                 actionIcon={
-                  <IconButton
-                    sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                    // aria-label={`info about ${project.title}`}
+                  <Tooltip placement='bottom'
+                    title={
+                      <a href={project.repoLink}
+                        className='hover:underline'
+                      >
+                        Link to Repository
+                      </a>
+                    }
                   >
-                    <a href={project.deployedApp}>
-                      <GitHub />
+                    <a href={project.repoLink}>
+                      <IconButton
+                        sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                        // aria-label={`info about ${project.title}`}
+                      >
+                        <OpenInNewIcon />
+                      </IconButton>
                     </a>
-                  </IconButton>
+                  </Tooltip>
                 }
                 actionPosition="right"
               />
