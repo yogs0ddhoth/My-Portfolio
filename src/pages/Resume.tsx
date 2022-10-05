@@ -2,7 +2,7 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import VerticalTabs from '../components/Resume'
-import benLinResume from '../assets/resume/Ben-Lin-Resume.pdf';
+import benLinResume from '../assets/resume/Ben-Lin_Resume.pdf';
 
 import '../assets/css/style.css';
 
