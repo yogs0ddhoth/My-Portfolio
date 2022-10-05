@@ -1,5 +1,5 @@
 import React, { useState }from 'react';
-import { ProjectType } from '../../utils/Types';
+import { ProjectType } from '../../assets/Types';
 
 import { Card, Popover } from '@mui/material';
 // import '../../assets/css/index.css';

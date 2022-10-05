@@ -1,16 +1,24 @@
-import gymDiary from '../assets/images/Gym-Diary.png';
-import blogme from '../assets/images/blogme.png';
-import cinematic from '../assets/images/CineMatic.png';
-import findYourForecase from '../assets/images/Find-Your-Forecast.png';
-import underConstruction from '../assets/images/under-construction.png';
-// import showWhatYouKnow from '../images/Show-What-You-Know.png';
-// import underConstruction from '../images/under-construction.jpg';
+import quizmaster from '../images/Quizmaster.png';
+import gymDiary from '../images/Gym-Diary.png';
+import blogme from '../images/blogme.png';
+import cinematic from '../images/CineMatic.png';
+import findYourForecase from '../images/Find-Your-Forecast.png';
+import showWhatYouKnow from '../images/Show-What-You-Know.png';
+import underConstruction from '../images/under-construction.jpg';
 
 export const projectData = [
   {
+    name: "Quizmaster",
+    description: "A Trivia Question Exchange",
+    technologies: "[MERN Stack, Semantic UI React Library, Stripe Payment Services API]",
+    repoLink: "https://github.com/yogs0ddhoth/QuizMaster",
+    deployedApp: "https://polar-island-54317.herokuapp.com",
+    img: quizmaster
+  },
+  {
     name: "Gym Diary",
-    description: "A Full-Stack Workout Tracking App",
-    technologies: "{SQL, MVC, ORM, API routing}",
+    description: "A Workout Tracking App",
+    technologies: "{Express.js, MySQL, Sequelize ORM, REST APIs}",
     repoLink: "https://github.com/ItzDerian/gym-diary",
     deployedApp: "https://tranquil-reaches-54677.herokuapp.com",
     img: gymDiary
@@ -18,7 +26,7 @@ export const projectData = [
   {
     name: "CineMatic",
     description: "A Movie Search Engine",
-    technologies: "[JQuery/AJAX, Web API, Bootstrap]",
+    technologies: "[ES6, JQuery/AJAX, Web API, Bootstrap]",
     repoLink: "https://github.com/tnoonan88/Cinematic-Film-Finder",
     deployedApp: "https://tnoonan88.github.io/Cinematic-Film-Finder/",
     img: cinematic
@@ -26,7 +34,7 @@ export const projectData = [
   {
     name: "Blogme",
     description: "A Full-Stack Blog",
-    technologies: "{SQL, MVC, ORM, API routing, Tempating}",
+    technologies: "{Express.js, MySQL, Sequelize ORM, REST APIs, Handlebar Tempating}",
     repoLink: "https://github.com/yogs0ddhoth/blogme",
     deployedApp: "https://still-eyrie-26683.herokuapp.com/",
     img: blogme

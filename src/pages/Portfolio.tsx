@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import GitHub from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 // import '../assets/css/style.css';
-import { projectData } from '../assets/utils/project-data';
+import { projectData } from '../assets/project-data';
 import { Tooltip } from '@mui/material';
 
 export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => {
@@ -63,10 +63,10 @@ export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => 
                   </Tooltip>
                 }
                 subtitle={
-                  <div>
+                  <>
                     <Typography variant='subtitle1'>{project.description}</Typography>
-                    <Typography variant='subtitle2'>{project.technologies}</Typography>
-                  </div>
+                    <Typography variant='subtitle2' className='whitespace-normal'>{project.technologies}</Typography>
+                  </>
                 }
                 sx={{ whiteSpace: "normal"}}
                 actionIcon={
