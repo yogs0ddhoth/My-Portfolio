@@ -1,8 +1,8 @@
-const gymDiary = require('../assets/images/Gym-Diary.png');
-const blogme = require('../assets/images/blogme.png');
-const cinematic = require('../assets/images/CineMatic.png');
-const findYourForecase = require('../assets/images/Find-Your-Forecast.png');
-const underConstruction = require('../assets/images/under-construction.png');
+import gymDiary from '../assets/images/Gym-Diary.png';
+import blogme from '../assets/images/blogme.png';
+import cinematic from '../assets/images/CineMatic.png';
+import findYourForecase from '../assets/images/Find-Your-Forecast.png';
+import underConstruction from '../assets/images/under-construction.png';
 // import showWhatYouKnow from '../images/Show-What-You-Know.png';
 // import underConstruction from '../images/under-construction.jpg';
 

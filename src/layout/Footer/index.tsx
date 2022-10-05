@@ -13,7 +13,7 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
   const linksData = [
     { href: "mailto:blin7.webdev@gmail.com", icon: solid('envelope')},
     { href: "https://github.com/yogs0ddhoth", icon: faGithub },
-    { href: "https://stackoverflow.com/users/17608484/blin", icon: faStackOverflow },
+    // { href: "https://stackoverflow.com/users/17608484/blin", icon: faStackOverflow },
     { href: "https://www.linkedin.com/in/ben-lin-b70a79227/", icon: faLinkedin }
   ];
   return (matchDownMd === true) ? (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
@@ -17,12 +17,8 @@ export default function Header() {
   const handleClick = (event: React.MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget);
   const handleClose = () => setAnchorEl(null);
 
-  const navigation = [
-    {item: "About", link: "/"},
-    {item: "Portfolio", link: "/portfolio"},
-    {item: "Contact", link: "/contact"},
-    {item: "Resume", link: "/resume"}
-  ]
+  const navigate = useNavigate();
+
   return (
     <div className='relative'>
       <IconButton
@@ -55,10 +51,22 @@ export default function Header() {
         }
       >
         {
-          navigation.map(nav => (
-            <NavLink to={nav.link} className='theme-2 text-stone-50'>
-              <MenuItem>{nav.item}</MenuItem>
-            </NavLink>
+          [
+            {item: "About", link: "/"},
+            {item: "Portfolio", link: "/portfolio"},
+            {item: "Contact", link: "/contact"},
+            {item: "Resume", link: "/resume"}
+          ].map(nav => (
+            <MenuItem 
+              onClick={
+                () => {
+                  navigate(nav.link);
+                  handleClose();
+                }
+              }
+            >
+              {nav.item}
+            </MenuItem>
           ))
         }
       </Menu>
