@@ -18,20 +18,8 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.5",
-    "@mui/types": "^7.1.4",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/material-ui": "^0.21.12",
-    "@types/node": "^16.11.41",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "^18.0.5",
-    "@types/react-fontawesome": "^1.6.5",
-    "@types/react-router-dom": "^5.3.3",
     "babel-plugin-macros": "^3.1.0",
     "framer-motion": "^6.3.15",
-    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.33.0",
@@ -67,8 +55,26 @@
     ]
   },
   "devDependencies": {
+    "@mui/types": "^7.1.4",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/material-ui": "^0.21.12",
+    "@types/node": "^16.11.41",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-fontawesome": "^1.6.5",
+    "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.7",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
     "tailwindcss": "^3.1.4"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
   }
 }
