@@ -2,6 +2,10 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
@@ -10,12 +14,13 @@ import '../../assets/css/style.css';
 
 
 export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
-  const linksData = [
-    { href: "mailto:blin7.webdev@gmail.com", icon: solid('envelope')},
-    { href: "https://github.com/yogs0ddhoth", icon: faGithub },
+  const links = [
+    { href: "mailto:blin7.webdev@gmail.com", Icon: EmailIcon},
+    { href: "https://github.com/yogs0ddhoth", Icon: GitHubIcon },
     // { href: "https://stackoverflow.com/users/17608484/blin", icon: faStackOverflow },
-    { href: "https://www.linkedin.com/in/ben-lin-b70a79227/", icon: faLinkedin }
-  ];
+    { href: "https://www.linkedin.com/in/ben-lin-b70a79227/", Icon: LinkedInIcon }
+  ]
+
   return (matchDownMd === true) ? (
     <div className='
         theme-2 
@@ -31,12 +36,12 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
         spacing={3}
       >
         {
-          linksData.map(link => (
+          links.map(link => (
             <IconButton
               LinkComponent={'a'}
               href={link.href}
             >
-              <FontAwesomeIcon className="fa-lg drop-shadow-icon" icon={link.icon} />
+              <link.Icon className=" drop-shadow-icon" />
             </IconButton>
           ))
         }
@@ -60,12 +65,12 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
       spacing={2}
     >
       {
-        linksData.map(link => (
+        links.map(link => (
           <IconButton
             LinkComponent={'a'}
             href={link.href}
           >
-            <FontAwesomeIcon className="fa-lg drop-shadow-icon" icon={link.icon} />
+            <link.Icon className='drop-shadow-icon' />
           </IconButton>
         ))
       }

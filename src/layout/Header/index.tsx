@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-
+import MenuIcon from '@mui/icons-material/Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -30,12 +30,12 @@ export default function Header() {
         onClick={handleClick}
         className='text-6xl justify-self-end'
       >
-        {/* <MenuIcon 
+        <MenuIcon 
           // color='primary'
-          className='text-stone-50 drop-shadow-icon'
+          className='drop-shadow-icon'
           fontSize={'large'}
-        /> */}
-        <FontAwesomeIcon className="fa-lg drop-shadow-icon" icon={faBars} />
+        />
+        {/* <FontAwesomeIcon className="fa-lg drop-shadow-icon" icon={faBars} /> */}
       </IconButton>
       <Menu className='opacity-95'
         id="navigation-menu"
