@@ -3,7 +3,7 @@
 This webpage includes a navigation bar, an **About Me**, links to **My Work**, and ways to **Contact Me**.
 
 ## Link to deployed application:
-https://yogs0ddhoth.github.io/
+https://yogs0ddhoth.github.io/My-Portfolio
 
 ## Recent Updates: 
 
