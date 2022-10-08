@@ -1,12 +1,21 @@
-import quizmaster from '../images/Quizmaster.png';
-import gymDiary from '../images/Gym-Diary.png';
-import blogme from '../images/blogme.png';
-import cinematic from '../images/CineMatic.png';
-import findYourForecase from '../images/Find-Your-Forecast.png';
-import showWhatYouKnow from '../images/Show-What-You-Know.png';
-import underConstruction from '../images/under-construction.jpg';
+import quizmaster from './images/Quizmaster.png';
+import gymDiary from './images/Gym-Diary.png';
+import blogme_v2 from './images/blogme_v2.jpg';
+import blogme from './images/blogme.png';
+import cinematic from './images/CineMatic.png';
+import findYourForecase from './images/Find-Your-Forecast.png';
+import showWhatYouKnow from './images/Show-What-You-Know.png';
+import underConstruction from './images/under-construction.jpg';
 
 export const projectData = [
+  {
+    name: "Blogme",
+    description: "A Full-Stack Blog",
+    technologies: "{Flask, SQLAlchemy, REST, MaterialUI React Library, Tailwindcss}",
+    repoLink: "https://github.com/yogs0ddhoth/blogme-v2",
+    deployedApp: "https://yogs0ddhoth-blogme-v2.herokuapp.com/",
+    img: blogme_v2
+  },
   {
     name: "Quizmaster",
     description: "A Trivia Question Exchange",
@@ -30,14 +39,6 @@ export const projectData = [
     repoLink: "https://github.com/tnoonan88/Cinematic-Film-Finder",
     deployedApp: "https://tnoonan88.github.io/Cinematic-Film-Finder/",
     img: cinematic
-  },
-  {
-    name: "Blogme",
-    description: "A Full-Stack Blog",
-    technologies: "{Express.js, MySQL, Sequelize ORM, REST APIs, Handlebar Tempating}",
-    repoLink: "https://github.com/yogs0ddhoth/blogme",
-    deployedApp: "https://still-eyrie-26683.herokuapp.com/",
-    img: blogme
   },
   {
     name: "Find Your Forecast",
