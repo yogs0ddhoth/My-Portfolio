@@ -96,17 +96,17 @@ export default function VerticalTabs({matchDownSm}: {matchDownSm: boolean}) {
       </Tabs>
       <TabPanel value={value} index={0}>
         <PanelList 
-          list={["HTML5", "CSS3", "JavaScript/TypeScript", "SQL"]}
+          list={["HTML5", "CSS3", "TypeScript/JS", "Python", "SQL"]}
         />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <PanelList 
-          list={["Node.js/Express.js", "React", "Webpack", "GraphQL"]}
+          list={["Flask", "Express.js", "React", "Angular", "Tailwind CSS", "GraphQL"]}
         />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <PanelList 
-          list={["MongoDB", "MySQL", "Github", "Heroku", "Web API"]}
+          list={["Node.js", "MongoDB", "MySQL", "Webpack", "Github", "Heroku"]}
         />
       </TabPanel>
     </Box>
