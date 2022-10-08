@@ -12,7 +12,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { projectData } from '../assets/project-data';
 import { Tooltip } from '@mui/material';
 
-export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => {
+export default function Portfolio(props: {matchDownMd: boolean, matchUpLg: boolean}) {
 
   console.log(projectData);
   return (
@@ -55,7 +55,7 @@ export const Portfolio = (props: {matchDownMd: boolean, matchUpLg: boolean}) => 
                   >
                     <a href={project.deployedApp}>
                       <Typography variant='h5'
-                        className='hover:underline'
+                        className='underline hover:text-pink-500'
                       >
                         {project.name}
                       </Typography>

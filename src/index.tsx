@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter as Router } from 'react-router-dom';
 import './index.css';
 import "@fontsource/roboto";
-import { darkTheme } from './utils/theme';
+import { StyledEngineProvider } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material/styles';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -14,9 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Router>
-      <ThemeProvider theme={darkTheme}>
-        <App />
-      </ThemeProvider>
+      <App />
     </Router>
   </React.StrictMode>
 );
