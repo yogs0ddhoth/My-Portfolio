@@ -6,7 +6,7 @@ import Project from '../components/Project';
 import { Projects } from '../assets/project-data';
 import Page from '../components/Page';
 
-export default function ({
+export default function Portfolio({
   matchDownMd,
   matchUpLg,
 }: {

@@ -46,7 +46,7 @@ const PanelList = ({ list }: { list: string[] }) => (
   </List>
 );
 
-export default function ({ matchDownSm }: { matchDownSm: boolean }) {
+export default function Resume({ matchDownSm }: { matchDownSm: boolean }) {
   const [value, setValue] = React.useState(0);
 
   return (

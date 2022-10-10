@@ -7,7 +7,7 @@ import benLinResume from '../assets/resume/Ben-Lin_Resume.pdf';
 import Page from '../components/Page';
 import VerticalTabs from '../components/Resume';
 
-export default function ({
+export default function Resume({
   matchDownXs,
   matchDownSm,
 }: {

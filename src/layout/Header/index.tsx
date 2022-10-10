@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Footer from '../Footer';
 import Typography from '@mui/material/Typography';
 
-export default function () {
+export default function Header() {
   const [state, setState] = React.useState(false);
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {

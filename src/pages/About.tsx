@@ -2,7 +2,7 @@ import Typography from '@mui/material/Typography';
 
 import Page from '../components/Page';
 
-export default function () {
+export default function About() {
   return (
     <Page
       header={{

@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 import Page from '../components/Page';
 
-export default function () {
+export default function Contact() {
   return (
     <Page
       content={

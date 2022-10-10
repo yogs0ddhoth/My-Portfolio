@@ -17,7 +17,7 @@ interface PageProps {
   children?: React.ReactNode;
   actions?: React.ReactNode;
 }
-export default function ({
+export default function Page({
   className,
   header,
   content,

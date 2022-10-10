@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Link from '@mui/material/Link';
 
-export default function () {
+export default function Footer() {
   const links = [
     { href: 'mailto:blin7.webdev@gmail.com', Icon: EmailIcon },
     { href: 'https://github.com/yogs0ddhoth', Icon: GitHubIcon },

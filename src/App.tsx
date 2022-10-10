@@ -9,7 +9,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 
-export default function () {
+export default function App() {
   const matchDownXs = useMediaQuery(useTheme().breakpoints.down(420));
   const matchDownSm = useMediaQuery(useTheme().breakpoints.down(640));
   const matchDownMd = useMediaQuery(useTheme().breakpoints.down(768));

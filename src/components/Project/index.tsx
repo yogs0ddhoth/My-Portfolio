@@ -30,7 +30,7 @@ interface LinkTooltipProps {
   children: ReactElement;
 }
 
-export default function ({
+export default function Project({
   name,
   description,
   technologies,
