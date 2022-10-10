@@ -12,66 +12,82 @@ import { Project } from '../../assets/project-data';
 import { ReactElement } from 'react';
 
 interface LinkTooltipProps {
-  href: string,
-  placement?: "bottom" | "bottom-end" | "bottom-start" | "left-end" | "left-start" | "left" | "right-end" | "right-start" | "right" | "top-end" | "top-start" | "top",
-  title: string,
-  children: ReactElement
+  href: string;
+  placement?:
+    | 'bottom'
+    | 'bottom-end'
+    | 'bottom-start'
+    | 'left-end'
+    | 'left-start'
+    | 'left'
+    | 'right-end'
+    | 'right-start'
+    | 'right'
+    | 'top-end'
+    | 'top-start'
+    | 'top';
+  title: string;
+  children: ReactElement;
 }
 
-export default function({
+export default function ({
   name,
   description,
   technologies,
   repoLink,
   deployedApp,
-  img
+  img,
 }: Project) {
   const LinkTooltip = ({
-    href, 
-    placement, 
-    title, 
-    children
+    href,
+    placement,
+    title,
+    children,
   }: LinkTooltipProps) => (
-    <Tooltip placement={placement ? placement : 'bottom'}
+    <Tooltip
+      placement={placement ? placement : 'bottom'}
       title={
-        <Link href={href} color='inherit'>
+        <Link href={href} color="inherit">
           {title}
         </Link>
       }
     >
       {children}
     </Tooltip>
-  )
+  );
   return (
     <ImageListItem key={name}>
-      <img alt={name}
+      <img
+        alt={name}
         src={`${img}?w=248&fit=crop&auto=format`}
         srcSet={`${img}?w=248&fit=crop&auto=format&dpr=2 2x`}
       />
 
       <ImageListItemBar
         title={
-          <LinkTooltip href={deployedApp} 
-            title='Link to Deployed App' placement='bottom-start'
+          <LinkTooltip
+            href={deployedApp}
+            title="Link to Deployed App"
+            placement="bottom-start"
           >
-            <Link variant='h5' color='inherit' 
-              href={deployedApp}
-            >
+            <Link variant="h5" color="inherit" href={deployedApp}>
               {name}
             </Link>
           </LinkTooltip>
         }
         subtitle={
           <>
-            <Typography variant='subtitle1'>{description}</Typography>
-            <Typography variant='subtitle2' className='whitespace-normal'>
+            <Typography variant="subtitle1">{description}</Typography>
+            <Typography variant="subtitle2" className="whitespace-normal">
               {technologies}
             </Typography>
           </>
         }
         actionIcon={
-          <LinkTooltip href={repoLink} 
-            title='Link to Repository' placement='bottom'
+          <LinkTooltip
+            href={repoLink}
+            title="Link to Repository"
+            placement="bottom"
           >
             <IconButton href={repoLink}>
               <OpenInNewIcon />
@@ -81,5 +97,5 @@ export default function({
         actionPosition="right"
       />
     </ImageListItem>
-  )
-};
+  );
+}

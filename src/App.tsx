@@ -15,7 +15,7 @@ import Typography from '@mui/material/Typography';
 // import "@fontsource/rock-3d"
 // import "@fontsource/average-sans";
 
-import background from "./assets/images/marek-piwnicki-ibc616VrRo4-unsplash.jpg";
+// import background from "./assets/images/marek-piwnicki-ibc616VrRo4-unsplash.jpg";
 
 import './assets/css/style.css';
 
@@ -27,9 +27,8 @@ import Resume from './pages/Resume';
 import Layout from './layout';
 
 export default function App() {
-
   const matchDownSm = useMediaQuery(useTheme().breakpoints.down(640));
-  const matchDownMd = useMediaQuery(useTheme().breakpoints.down(768))
+  const matchDownMd = useMediaQuery(useTheme().breakpoints.down(768));
   const matchUpLg = useMediaQuery(useTheme().breakpoints.up(1024));
 
   return (
@@ -37,16 +36,16 @@ export default function App() {
     //   <ColorModeContext.Provider value={colorMode}>
     //     <ThemeProvider theme={theme}>
     //       <div className='
-    //         min-h-screen min-w-full bg-cover 
+    //         min-h-screen min-w-full bg-cover
     //         grid grid-cols-12 justify-end
-    //         ' 
+    //         '
     //         style={
     //           { backgroundImage: `url(${background})` }
     //         }
     //       >
     //         <div className='col-span-11' />
     //         <div className='
-    //           col-span-1 
+    //           col-span-1
     //           flex flex-row justify-center items-center
     //           '
     //         >
@@ -65,16 +64,21 @@ export default function App() {
     //         >
     <Layout>
       <Routes>
-        <Route path='/' element={<About />} />
-        <Route path='/portfolio' element={<Portfolio matchDownMd={matchDownMd} matchUpLg={matchUpLg} />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/resume' element={<Resume matchDownSm={matchDownSm} />} />
+        <Route path="/" element={<About />} />
+        <Route
+          path="/portfolio"
+          element={
+            <Portfolio matchDownMd={matchDownMd} matchUpLg={matchUpLg} />
+          }
+        />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume matchDownSm={matchDownSm} />} />
       </Routes>
     </Layout>
     //         </div>
     //         <div className='
     //           pt-8 md:pt-0
-    //           col-span-12 row-span-5 md:col-span-1 
+    //           col-span-12 row-span-5 md:col-span-1
     //           flex flex-col justify-start
     //           '
     //         >
@@ -89,7 +93,7 @@ export default function App() {
     //                 absolute bottom-0.5
     //               '
     //             >
-    //               image courtesy of <a 
+    //               image courtesy of <a
     //                 className='underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'
     //               >Marek Piwnicki</a>
     //             </Typography>
@@ -97,7 +101,7 @@ export default function App() {
     //             <></>
     //           )
     //         }
-    //       </div> 
+    //       </div>
     //     </ThemeProvider>
     //   </ColorModeContext.Provider>
     // </StyledEngineProvider>

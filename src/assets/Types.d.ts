@@ -5,4 +5,4 @@ export interface ProjectType {
   repoLink: string;
   deployedApp: string;
   img: string;
-};
+}

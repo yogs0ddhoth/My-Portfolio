@@ -21,13 +21,11 @@ import Footer from '../Footer';
 import Typography from '@mui/material/Typography';
 import { Link } from '@mui/material';
 
-
-export default function() {
+export default function () {
   const [state, setState] = React.useState(false);
 
   const toggleDrawer =
-    (open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
         event.type === 'keydown' &&
         ((event as React.KeyboardEvent).key === 'Tab' ||
@@ -40,10 +38,11 @@ export default function() {
     };
   const navigate = useNavigate();
   const DrawerList = () => (
-    <Box className='h-[100vh]'
-      sx={{ 
-        // bgcolor:'background.default', 
-        width: 250
+    <Box
+      className="h-[100vh]"
+      sx={{
+        // bgcolor:'background.default',
+        width: 250,
         // height: full
       }}
       role="presentation"
@@ -52,17 +51,17 @@ export default function() {
     >
       <List>
         {[
-          {item: "About", link: "/"},
-          {item: "Portfolio", link: "/portfolio"},
-          {item: "Contact", link: "/contact"},
-          {item: "Resume", link: "/resume"}
-          ].map(({item, link}) => (
+          { item: 'About', link: '/' },
+          { item: 'Portfolio', link: '/portfolio' },
+          { item: 'Contact', link: '/contact' },
+          { item: 'Resume', link: '/resume' },
+        ].map(({ item, link }) => (
           <ListItem key={item} disablePadding>
             <ListItemButton onClick={() => navigate(link)}>
               {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon> */}
-              <Typography className='text-pink-500'>{item}</Typography>
+              <Typography className="text-pink-500">{item}</Typography>
             </ListItemButton>
           </ListItem>
         ))}
@@ -87,24 +86,30 @@ export default function() {
     <>
       {/* {
         <React.Fragment key='right'> */}
-          <IconButton onClick={toggleDrawer(true)}>
-            <MenuIcon className='drop-shadow-icon'/>
-          </IconButton>
-          <Drawer
-            anchor='right'
-            open={state}
-            onClose={toggleDrawer(false)}
-            className='flex flex-col justify-end'
+      <IconButton onClick={toggleDrawer(true)}>
+        <MenuIcon className="drop-shadow-icon" />
+      </IconButton>
+      <Drawer
+        anchor="right"
+        open={state}
+        onClose={toggleDrawer(false)}
+        className="flex flex-col justify-end"
+      >
+        <DrawerList />
+        <Divider />
+        <Footer />
+        <Typography variant="caption" align="center">
+          image courtesy of{' '}
+          <Link
+            className="text-[#fff] underline hover:cursor-pointer"
+            href="https://unsplash.com/@marekpiwnicki"
           >
-            <DrawerList />
-            <Divider />
-            <Footer />
-            <Typography variant='caption' align='center'>
-              image courtesy of <Link className='text-[#fff] underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'>Marek Piwnicki</Link>
-            </Typography>
-          </Drawer>
-        {/* </React.Fragment>
+            Marek Piwnicki
+          </Link>
+        </Typography>
+      </Drawer>
+      {/* </React.Fragment>
       } */}
     </>
   );
-};
+}

@@ -9,7 +9,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import background from "../assets/images/marek-piwnicki-ibc616VrRo4-unsplash.jpg";
+import background from '../assets/images/marek-piwnicki-ibc616VrRo4-unsplash.jpg';
 
 import '../assets/css/style.css';
 
@@ -22,7 +22,7 @@ const ColorModeContext = React.createContext({
   toggleColorMode: () => {},
 });
 
-export default function Layout({children}: {children: React.ReactNode}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
 
   // infrastructure to implement light mode
@@ -47,7 +47,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
     [mode]
   );
   const matchDownSm = useMediaQuery(useTheme().breakpoints.down(640));
-  const matchDownMd = useMediaQuery(useTheme().breakpoints.down(768))
+  const matchDownMd = useMediaQuery(useTheme().breakpoints.down(768));
   const matchUpLg = useMediaQuery(useTheme().breakpoints.up(1024));
 
   return (
@@ -60,23 +60,22 @@ export default function Layout({children}: {children: React.ReactNode}) {
               h-[100vh] min-w-[100vw] overflow-x-hidden bg-cover
               grid grid-cols-12 grid-rows-12
             "
-            sx={{backgroundImage: `url(${background})` }}
+            sx={{ backgroundImage: `url(${background})` }}
           >
-            <div 
-              className='col-span-11 row-span-1' 
-            />
-            <div 
-              className='
+            <div className="col-span-11 row-span-1" />
+            <div
+              className="
                 col-span-1 row-span-1
                 flex flex-row justify-center items-center
-                '
+                "
             >
               <Header />
             </div>
 
-            <main className='container m-auto
+            <main
+              className="container m-auto
               col-span-12 row-span-10
-              '
+              "
             >
               {children}
             </main>
@@ -94,7 +93,6 @@ export default function Layout({children}: {children: React.ReactNode}) {
               </Typography>
             )}
             </div> */}
-
           </Container>
         </ThemeProvider>
       </ColorModeContext.Provider>

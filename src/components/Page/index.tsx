@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -12,21 +12,16 @@ interface PageProps {
     action?: React.ReactNode;
     avatar?: React.ReactNode;
     subheader?: React.ReactNode;
-  }
+  };
   content?: React.ReactNode;
   actions?: React.ReactNode;
 }
-export default function({
-  className,
-  header,
-  content,
-  actions
-}: PageProps) {
-    return (
-        <Card className={className}>
-            <CardHeader {...header} />
-            <CardContent>{content}</CardContent>
-            <CardActions>{actions}</CardActions>
-        </Card>
-    )
+export default function ({ className, header, content, actions }: PageProps) {
+  return (
+    <Card className={className}>
+      <CardHeader {...header} />
+      <CardContent>{content}</CardContent>
+      <CardActions>{actions}</CardActions>
+    </Card>
+  );
 }
