@@ -61,13 +61,9 @@ export default function () {
       <IconButton onClick={toggleDrawer(true)}>
         <MenuIcon className="drop-shadow-icon" />
       </IconButton>
-      <Drawer
-        anchor="right"
-        open={state}
-        onClose={toggleDrawer(false)}
-      >
+      <Drawer anchor="right" open={state} onClose={toggleDrawer(false)}>
         <DrawerList />
-        <Divider /> 
+        <Divider />
         <Footer />
       </Drawer>
     </>

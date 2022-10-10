@@ -42,7 +42,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <StyledEngineProvider injectFirst>
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
-
           <Container
             maxWidth={false}
             className="
@@ -69,7 +68,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {children}
             </main>
           </Container>
-
         </ThemeProvider>
       </ColorModeContext.Provider>
     </StyledEngineProvider>

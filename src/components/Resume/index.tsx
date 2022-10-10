@@ -54,17 +54,15 @@ export default function ({ matchDownSm }: { matchDownSm: boolean }) {
       sx={{
         bgcolor: 'background.paper',
         display: 'flex',
-        flexDirection: matchDownSm ? 'column' : 'row'
+        flexDirection: matchDownSm ? 'column' : 'row',
       }}
     >
       <Tabs
-        orientation={matchDownSm ? "horizontal" : "vertical"}
+        orientation={matchDownSm ? 'horizontal' : 'vertical'}
         variant="scrollable"
         value={value}
-        onChange={
-          (_, newValue: number) => setValue(newValue)
-        }
-        scrollButtons='auto'
+        onChange={(_, newValue: number) => setValue(newValue)}
+        scrollButtons="auto"
         sx={{
           borderRight: 1,
           borderColor: 'divider',
@@ -76,7 +74,9 @@ export default function ({ matchDownSm }: { matchDownSm: boolean }) {
       </Tabs>
 
       <TabPanel value={value} index={0}>
-        <PanelList list={['HTML', 'CSS', 'TypeScript/JS', 'Python', 'SQL', 'GraphQL']} />
+        <PanelList
+          list={['HTML', 'CSS', 'TypeScript/JS', 'Python', 'SQL', 'GraphQL']}
+        />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <PanelList
@@ -86,7 +86,7 @@ export default function ({ matchDownSm }: { matchDownSm: boolean }) {
             'React',
             'Angular',
             'Tailwind CSS',
-            'Next.js'
+            'Next.js',
           ]}
         />
       </TabPanel>

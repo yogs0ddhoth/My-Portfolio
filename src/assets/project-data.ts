@@ -1,10 +1,10 @@
 import quizmaster from './images/Quizmaster.png';
 import gymDiary from './images/Gym-Diary.png';
 import blogme_v2 from './images/blogme_v2.jpg';
-import blogme from './images/blogme.png';
+import blogme from './images/blogme.png'; // legacy project
 import cinematic from './images/CineMatic.png';
 import findYourForecase from './images/Find-Your-Forecast.png';
-import showWhatYouKnow from './images/Show-What-You-Know.png';
+import showWhatYouKnow from './images/Show-What-You-Know.png'; // legacy project
 import underConstruction from './images/under-construction.jpg';
 
 export interface Project {

@@ -6,7 +6,12 @@ export default function () {
   return (
     <Page
       header={{
-        title: <Typography variant="h4" alignContent='center'> Hi, my name is </Typography>,
+        title: (
+          <Typography variant="h4" alignContent="center">
+            {' '}
+            Hi, my name is{' '}
+          </Typography>
+        ),
         subheader: <Typography variant="h1">Ben Lin</Typography>,
       }}
       content={

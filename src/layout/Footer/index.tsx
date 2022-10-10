@@ -20,7 +20,7 @@ export default function () {
 
   return (
     <Stack
-      sx={{position:'fixed', bottom: '.25rem', right: '1.75rem'}}
+      sx={{ position: 'fixed', bottom: '.25rem', right: '1.75rem' }}
       direction="column"
       justifyContent="center"
       alignItems="center"
@@ -34,7 +34,7 @@ export default function () {
       >
         {links.map((link) => (
           <IconButton href={link.href} LinkComponent="a">
-            <link.Icon className="drop-shadow-icon" fontSize='medium' />
+            <link.Icon className="drop-shadow-icon" fontSize="medium" />
           </IconButton>
         ))}
       </Stack>

@@ -7,8 +7,8 @@ module.exports = {
   important: '#root',
   theme: {
     // fontFamily: {
-  //     'londrina-sketch': [`"Londrina Sketch", cursive`]
-  //   },
+    //   'londrina-sketch': [`"Londrina Sketch", cursive`]
+    // },
     extend: {
       dropShadow: {
         'icon': '0 4px 4px rgb(0 0 0 / 0.95)'

@@ -6,9 +6,16 @@ import Project from '../components/Project';
 import { Projects } from '../assets/project-data';
 import Page from '../components/Page';
 
-export default function ({matchDownMd, matchUpLg}: { matchDownMd: boolean; matchUpLg: boolean }) {
+export default function ({
+  matchDownMd,
+  matchUpLg,
+}: {
+  matchDownMd: boolean;
+  matchUpLg: boolean;
+}) {
   return (
-    <ImageList className='pb-4'
+    <ImageList
+      className="pb-4"
       variant="masonry"
       cols={matchDownMd ? 1 : matchUpLg ? 3 : 2}
       gap={8}
@@ -24,9 +31,9 @@ export default function ({matchDownMd, matchUpLg}: { matchDownMd: boolean; match
         </Page>
       </ImageListItem>
 
-      {Projects.map(
-        project => <Project {...project} />
-      )}
+      {Projects.map((project) => (
+        <Project {...project} />
+      ))}
     </ImageList>
   );
 }
