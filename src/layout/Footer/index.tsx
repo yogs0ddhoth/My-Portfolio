@@ -12,8 +12,7 @@ import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-
 
 import '../../assets/css/style.css';
 
-
-export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
+export default function({direction}: {direction?: boolean}) {
   const links = [
     { href: "mailto:blin7.webdev@gmail.com", Icon: EmailIcon},
     { href: "https://github.com/yogs0ddhoth", Icon: GitHubIcon },
@@ -21,16 +20,16 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
     { href: "https://www.linkedin.com/in/ben-lin-b70a79227/", Icon: LinkedInIcon }
   ]
 
-  return (matchDownMd === true) ? (
-    <div className='
-        theme-2 
-        w-full pt-3
-        fixed bottom-0 left-0 
-        flex flex-row justify-center items-center
-      '
-    >
+  return (direction === true) ? (
+    // <div className='
+    //     theme-2 
+    //     w-full pt-3
+    //     fixed bottom-0 left-0 
+    //     flex flex-row justify-center items-center
+    //   '
+    // >
       <Stack
-        className='pb-6'
+        // className='pb-6'
         direction="row" 
         justifyContent="center" alignItems="center"
         spacing={3}
@@ -38,7 +37,7 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
         {
           links.map(link => (
             <IconButton
-              LinkComponent={'a'}
+              LinkComponent='a'
               href={link.href}
             >
               <link.Icon className=" drop-shadow-icon" />
@@ -46,29 +45,29 @@ export default function Footer({matchDownMd}: {matchDownMd: boolean}) {
           ))
         }
       </Stack>
-      <Typography variant='caption'
-        className='
-         text-stone-50 drop-shadow-icon
-          col-span-12 
-          absolute bottom-0
-        '
-      >
-        image courtesy of <a 
-          className='underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'
-        >Marek Piwnicki</a>
-      </Typography>
-    </div>
+      // <Typography variant='caption'
+      //   className='
+      //    text-stone-50 drop-shadow-icon
+      //     col-span-12 
+      //     absolute bottom-0
+      //   '
+      // >
+      //   image courtesy of <a 
+      //     className='underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'
+      //   >Marek Piwnicki</a>
+      // </Typography>
+
+    // </div>
     ) : (
     <Stack
-      direction="column"
+      direction="row"
       justifyContent="center" alignItems="center"
-      spacing={2}
+      // spacing={0}
     >
       {
         links.map(link => (
-          <IconButton
-            LinkComponent={'a'}
-            href={link.href}
+          <IconButton href={link.href}
+            LinkComponent='a'
           >
             <link.Icon className='drop-shadow-icon' />
           </IconButton>

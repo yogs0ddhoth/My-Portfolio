@@ -1,75 +1,110 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-import '../../assets/css/style.css';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import Footer from '../Footer';
+import Typography from '@mui/material/Typography';
+import { Link } from '@mui/material';
 
-export default function Header() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget);
-  const handleClose = () => setAnchorEl(null);
+export default function() {
+  const [state, setState] = React.useState(false);
 
+  const toggleDrawer =
+    (open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
+      ) {
+        return;
+      }
+
+      setState(open);
+    };
   const navigate = useNavigate();
+  const DrawerList = () => (
+    <Box className='h-[100vh]'
+      sx={{ 
+        // bgcolor:'background.default', 
+        width: 250
+        // height: full
+      }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <List>
+        {[
+          {item: "About", link: "/"},
+          {item: "Portfolio", link: "/portfolio"},
+          {item: "Contact", link: "/contact"},
+          {item: "Resume", link: "/resume"}
+          ].map(({item, link}) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton onClick={() => navigate(link)}>
+              {/* <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon> */}
+              <Typography className='text-pink-500'>{item}</Typography>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      {/* <Divider /> */}
+      {/* <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List> */}
+    </Box>
+  );
 
   return (
-    <div className='relative'>
-      <IconButton
-        id="navigation-button"
-        aria-controls={ open ? 'navigation-menu' : undefined }
-        aria-haspopup="true"
-        aria-expanded={ open ? 'true' : undefined }
-        aria-label="menu"
-        onClick={handleClick}
-        className='text-6xl justify-self-end'
-      >
-        <MenuIcon 
-          // color='primary'
-          className='drop-shadow-icon'
-          fontSize={'large'}
-        />
-        {/* <FontAwesomeIcon className="fa-lg drop-shadow-icon" icon={faBars} /> */}
-      </IconButton>
-      <Menu className='opacity-95'
-        id="navigation-menu"
-        aria-labelledby="navigation-button"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        anchorOrigin={
-          {vertical: "top", horizontal: "left"}
-        }
-        transformOrigin={
-          {vertical: "top", horizontal: "left"}
-        }
-      >
-        {
-          [
-            {item: "About", link: "/"},
-            {item: "Portfolio", link: "/portfolio"},
-            {item: "Contact", link: "/contact"},
-            {item: "Resume", link: "/resume"}
-          ].map(nav => (
-            <MenuItem 
-              onClick={
-                () => {
-                  navigate(nav.link);
-                  handleClose();
-                }
-              }
-            >
-              {nav.item}
-            </MenuItem>
-          ))
-        }
-      </Menu>
-    </div>
-  )
+    <>
+      {/* {
+        <React.Fragment key='right'> */}
+          <IconButton onClick={toggleDrawer(true)}>
+            <MenuIcon className='drop-shadow-icon'/>
+          </IconButton>
+          <Drawer
+            anchor='right'
+            open={state}
+            onClose={toggleDrawer(false)}
+            className='flex flex-col justify-end'
+          >
+            <DrawerList />
+            <Divider />
+            <Footer />
+            <Typography variant='caption' align='center'>
+              image courtesy of <Link className='text-[#fff] underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'>Marek Piwnicki</Link>
+            </Typography>
+          </Drawer>
+        {/* </React.Fragment>
+      } */}
+    </>
+  );
 };
