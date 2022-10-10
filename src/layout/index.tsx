@@ -5,6 +5,8 @@ import createTheme from '@mui/material/styles/createTheme';
 import useTheme from '@mui/material/styles/useTheme';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import background from "../assets/images/marek-piwnicki-ibc616VrRo4-unsplash.jpg";
@@ -23,6 +25,7 @@ const ColorModeContext = React.createContext({
 export default function Layout({children}: {children: React.ReactNode}) {
   const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
 
+  // infrastructure to implement light mode
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -43,7 +46,9 @@ export default function Layout({children}: {children: React.ReactNode}) {
       }),
     [mode]
   );
-  const matchDownMd = useMediaQuery(useTheme().breakpoints.down(768));
+  const matchDownSm = useMediaQuery(useTheme().breakpoints.down(640));
+  const matchDownMd = useMediaQuery(useTheme().breakpoints.down(768))
+  const matchUpLg = useMediaQuery(useTheme().breakpoints.up(1024));
 
   return (
     <StyledEngineProvider injectFirst>
@@ -53,19 +58,10 @@ export default function Layout({children}: {children: React.ReactNode}) {
             maxWidth={false}
             className="
               h-[100vh] min-w-[100vw] overflow-x-hidden bg-cover
-              p-0 
-              grid grid-cols-12 grid-rows-12 justify-end
+              grid grid-cols-12 grid-rows-12
             "
             sx={{backgroundImage: `url(${background})` }}
           >
-          {/* <div className='
-            min-h-screen min-w-full bg-cover 
-            grid grid-cols-12 justify-end
-            ' 
-            // style={
-            //   { backgroundImage: `url(${background})` }
-            // }
-          > */}
             <div 
               className='col-span-11 row-span-1' 
             />
@@ -78,52 +74,27 @@ export default function Layout({children}: {children: React.ReactNode}) {
               <Header />
             </div>
 
-            {/* <div
-              className='
-              md:col-span-1'
-            ></div> */}
             <main className='container m-auto
-              col-span-12 row-span-10 md:col-span-11
+              col-span-12 row-span-10
               '
-              // className='
-                // pl-3 pr-3 md:pr-0 pb-9
-                // col-span-12 md:col-span-11 row-span-10
-                // grid grid-cols-10 justify-start
-                // '
             >
               {children}
             </main>
-            <div className='
+            {/* <div className='
               col-span-12 row-span-1 md:col-span-1 md:row-span-10 
               '
-              // className='
-                // pt-8 md:pt-0
-                // col-span-12 row-span-1 md:col-span-1 md:row-span-10 
-                // flex flex-col justify-start
-                // '
             >
               <Footer matchDownMd={matchDownMd} />
-            </div>
-            <div>
-            {
-              matchDownMd === false ? (
-                <Typography variant='caption'
-                  className=' text-stone-50 col-span-12'
-                  // className='
-                  //  text-stone-50 drop-shadow-icon
-                  //   col-span-12 row pl-5 pt-3 pb-3
-                  // '
-                >
-                  image courtesy of <a 
-                    className='underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'
-                  >Marek Piwnicki</a>
-                </Typography>
-              ) : (
-                <></>
-              )
-            }
-            </div>
-          {/* </div>  */}
+            </div> */}
+
+            {/* <div className='col-span-12 row-span-2'>
+            {matchDownMd === false && (
+              <Typography variant='caption' className=' text-stone-50'>
+                image courtesy of <a className='underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'>Marek Piwnicki</a>
+              </Typography>
+            )}
+            </div> */}
+
           </Container>
         </ThemeProvider>
       </ColorModeContext.Provider>
