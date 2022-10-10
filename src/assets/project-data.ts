@@ -7,7 +7,15 @@ import findYourForecase from './images/Find-Your-Forecast.png';
 import showWhatYouKnow from './images/Show-What-You-Know.png';
 import underConstruction from './images/under-construction.jpg';
 
-export const projectData = [
+export interface Project {
+  name: string;
+  description: string;
+  technologies: string;
+  repoLink: string;
+  deployedApp: string;
+  img: string;
+}
+export const Projects: Project[] = [
   {
     name: "Blogme",
     description: "A Full-Stack Blog",
