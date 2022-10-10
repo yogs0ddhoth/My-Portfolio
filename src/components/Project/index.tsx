@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import GitHub from '@mui/icons-material/GitHub'; // alternate repo link icon
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-import { Project } from '../../assets/project-data';
+import { ProjectType } from '../../assets/project-data';
 import { ReactElement } from 'react';
 
 interface LinkTooltipProps {
@@ -37,7 +37,7 @@ export default function Project({
   repoLink,
   deployedApp,
   img,
-}: Project) {
+}: ProjectType) {
   const LinkTooltip = ({
     href,
     placement,

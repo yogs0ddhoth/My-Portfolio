@@ -7,7 +7,7 @@ import findYourForecase from './images/Find-Your-Forecast.png';
 import showWhatYouKnow from './images/Show-What-You-Know.png'; // legacy project
 import underConstruction from './images/under-construction.jpg';
 
-export interface Project {
+export interface ProjectType {
   name: string;
   description: string;
   technologies: string;
@@ -15,7 +15,7 @@ export interface Project {
   deployedApp: string;
   img: string;
 }
-export const Projects: Project[] = [
+export const Projects: ProjectType[] = [
   {
     name: 'Blogme',
     description: 'A Full-Stack Blog',
