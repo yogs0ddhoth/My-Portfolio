@@ -1,6 +1,6 @@
 const rootElement = document.getElementById('root') as HTMLElement;
 
-export default {
+const defaultTheme = {
   components: {
     MuiPopover: {
       defaultProps: {
@@ -22,3 +22,4 @@ export default {
   },
   spacing: 8,
 };
+export default defaultTheme;
