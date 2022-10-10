@@ -1,39 +1,28 @@
-import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import VerticalTabs from '../components/Resume'
+
 import benLinResume from '../assets/resume/Ben-Lin_Resume.pdf';
 
-import '../assets/css/style.css';
+import Page from '../components/Page';
+import VerticalTabs from '../components/Resume';
 
-export default function Resume({matchDownSm}: {matchDownSm: boolean}) {
+export default function({matchDownSm}: {matchDownSm: boolean}) {
   return (
-    <Card className='
-        opacity-95 drop-shadow-icon
-        col-span-10
-        grid grid-cols-12 grid-rows-6 justify-center
-      '
-    >
-      <Typography variant='h1' className='pl-3 col-span-12 row-span-1'>
-        Skills
-      </Typography>
-  
-      <div className='pl-5 pr-5 col-span-12 row-span-4'>
+    <Page
+      header={{
+        title: <Typography variant='h1'>Resume</Typography>,
+        subheader: <Typography variant='subtitle1'>Skills</Typography>
+      }}
+      content={
         <VerticalTabs matchDownSm={matchDownSm} />
-      </div>
-  
-      <div className='
-          pr-5 justify-items-end
-          col-span-12 row-span-1
-          flex justify-end items-center
-        '
-      >
+      }
+      actions={
         <a href={benLinResume} download>
-          <Button variant="outlined" size='large'>
+          <Button className='' variant="outlined" size='large'>
             Download
           </Button>
         </a>
-      </div>
-    </Card>
+      }
+    />
   );
 }
