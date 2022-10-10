@@ -7,7 +7,7 @@ export default function () {
   return (
     <Page
       content={
-        <Typography variant="h2">Get in touch with project ideas!</Typography>
+        <Typography variant="h2" align='center'>Get in touch with project ideas!</Typography>
       }
       actions={
         <Button

@@ -5,8 +5,9 @@ import IconButton from '@mui/material/IconButton';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Link from '@mui/material/Link';
 
-export default function ({ direction }: { direction?: boolean }) {
+export default function () {
   const links = [
     { href: 'mailto:blin7.webdev@gmail.com', Icon: EmailIcon },
     { href: 'https://github.com/yogs0ddhoth', Icon: GitHubIcon },
@@ -17,52 +18,35 @@ export default function ({ direction }: { direction?: boolean }) {
     },
   ];
 
-  return direction === true ? (
-    // <div className='
-    //     theme-2
-    //     w-full pt-3
-    //     fixed bottom-0 left-0
-    //     flex flex-row justify-center items-center
-    //   '
-    // >
+  return (
     <Stack
-      // className='pb-6'
-      direction="row"
+      sx={{position:'fixed', bottom: '.25rem', right: '1.75rem'}}
+      direction="column"
       justifyContent="center"
       alignItems="center"
-      spacing={3}
+      spacing={0}
     >
-      {links.map((link) => (
-        <IconButton LinkComponent="a" href={link.href}>
-          <link.Icon className=" drop-shadow-icon" />
-        </IconButton>
-      ))}
-    </Stack>
-  ) : (
-    // <Typography variant='caption'
-    //   className='
-    //    text-stone-50 drop-shadow-icon
-    //     col-span-12
-    //     absolute bottom-0
-    //   '
-    // >
-    //   image courtesy of <a
-    //     className='underline hover:cursor-pointer' href='https://unsplash.com/@marekpiwnicki'
-    //   >Marek Piwnicki</a>
-    // </Typography>
-
-    // </div>
-    <Stack
-      direction="row"
-      justifyContent="center"
-      alignItems="center"
-      // spacing={0}
-    >
-      {links.map((link) => (
-        <IconButton href={link.href} LinkComponent="a">
-          <link.Icon className="drop-shadow-icon" />
-        </IconButton>
-      ))}
+      <Stack
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={0}
+      >
+        {links.map((link) => (
+          <IconButton href={link.href} LinkComponent="a">
+            <link.Icon className="drop-shadow-icon" fontSize='medium' />
+          </IconButton>
+        ))}
+      </Stack>
+      <Typography variant="caption" align="center">
+        image courtesy of{' '}
+        <Link
+          className="text-[#fff] underline hover:cursor-pointer"
+          href="https://unsplash.com/@marekpiwnicki"
+        >
+          Marek Piwnicki
+        </Link>
+      </Typography>
     </Stack>
   );
 }

@@ -14,14 +14,15 @@ interface PageProps {
     subheader?: React.ReactNode;
   };
   content?: React.ReactNode;
+  children?: React.ReactNode;
   actions?: React.ReactNode;
 }
-export default function ({ className, header, content, actions }: PageProps) {
+export default function ({ className, header, content, children, actions }: PageProps) {
   return (
     <Card className={className}>
       <CardHeader {...header} />
-      <CardContent>{content}</CardContent>
-      <CardActions>{actions}</CardActions>
+      <CardContent>{content ? content : children}</CardContent>
+      <CardActions className='flex flex-row justify-center pb-5'>{actions}</CardActions>
     </Card>
   );
 }
