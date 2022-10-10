@@ -6,12 +6,6 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
-
-import '../../assets/css/style.css';
-
 export default function({direction}: {direction?: boolean}) {
   const links = [
     { href: "mailto:blin7.webdev@gmail.com", Icon: EmailIcon},
