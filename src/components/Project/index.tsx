@@ -5,7 +5,7 @@ import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
-import GitHub from '@mui/icons-material/GitHub'; // alternate repo link icon
+// import GitHub from '@mui/icons-material/GitHub'; // alternate repo link icon
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 import { ProjectType } from '../../assets/project-data';
