@@ -26,6 +26,14 @@ export const Projects: ProjectType[] = [
     img: blogme_v2,
   },
   {
+    name: 'Gym Diary',
+    description: 'A Workout Tracking App',
+    technologies: '{Express.js, MySQL, Sequelize ORM, REST APIs}',
+    repoLink: 'https://github.com/ItzDerian/gym-diary',
+    deployedApp: 'https://tranquil-reaches-54677.herokuapp.com',
+    img: gymDiary,
+  },
+  {
     name: 'Quizmaster',
     description: 'A Trivia Question Exchange',
     technologies:
@@ -33,14 +41,6 @@ export const Projects: ProjectType[] = [
     repoLink: 'https://github.com/yogs0ddhoth/QuizMaster',
     deployedApp: 'https://polar-island-54317.herokuapp.com',
     img: quizmaster,
-  },
-  {
-    name: 'Gym Diary',
-    description: 'A Workout Tracking App',
-    technologies: '{Express.js, MySQL, Sequelize ORM, REST APIs}',
-    repoLink: 'https://github.com/ItzDerian/gym-diary',
-    deployedApp: 'https://tranquil-reaches-54677.herokuapp.com',
-    img: gymDiary,
   },
   {
     name: 'CineMatic',
