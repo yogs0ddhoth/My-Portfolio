@@ -62,7 +62,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <main
               className="container m-auto
-              col-span-12 h-full
+              col-span-12 row-span-11 h-full xl:col-span-9
               "
             >
               {children}
