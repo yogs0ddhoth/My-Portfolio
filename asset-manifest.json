@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.3bc9f6ad.css",
-    "main.js": "/My-Portfolio/static/js/main.1be2fe55.js",
+    "main.css": "/My-Portfolio/static/css/main.acae1a52.css",
+    "main.js": "/My-Portfolio/static/js/main.a64dae51.js",
     "static/js/787.48fbe5ec.chunk.js": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js",
     "static/media/Quizmaster.png": "/My-Portfolio/static/media/Quizmaster.dbda70952dcd74602d21.png",
     "static/media/Gym-Diary.png": "/My-Portfolio/static/media/Gym-Diary.37100bd920624514d2f9.png",
@@ -20,12 +20,12 @@
     "static/media/roboto-vietnamese-400-normal.woff2": "/My-Portfolio/static/media/roboto-vietnamese-400-normal.3230f9b040f3c630e0c3.woff2",
     "static/media/roboto-greek-ext-400-normal.woff2": "/My-Portfolio/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "index.html": "/My-Portfolio/index.html",
-    "main.3bc9f6ad.css.map": "/My-Portfolio/static/css/main.3bc9f6ad.css.map",
-    "main.1be2fe55.js.map": "/My-Portfolio/static/js/main.1be2fe55.js.map",
+    "main.acae1a52.css.map": "/My-Portfolio/static/css/main.acae1a52.css.map",
+    "main.a64dae51.js.map": "/My-Portfolio/static/js/main.a64dae51.js.map",
     "787.48fbe5ec.chunk.js.map": "/My-Portfolio/static/js/787.48fbe5ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bc9f6ad.css",
-    "static/js/main.1be2fe55.js"
+    "static/css/main.acae1a52.css",
+    "static/js/main.a64dae51.js"
   ]
 }
