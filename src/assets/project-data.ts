@@ -22,7 +22,7 @@ export const Projects: ProjectType[] = [
     technologies:
       '{Flask, SQLAlchemy, REST, MaterialUI React Library, Tailwindcss}',
     repoLink: 'https://github.com/yogs0ddhoth/blogme-v2',
-    deployedApp: 'https://yogs0ddhoth-blogme-v2.herokuapp.com/',
+    deployedApp: 'https://yogs0ddhoth-blogme-v2.herokuapp.com',
     img: blogme_v2,
   },
   {
@@ -30,7 +30,7 @@ export const Projects: ProjectType[] = [
     description: 'A Workout Tracking App',
     technologies: '{Express.js, MySQL, Sequelize ORM, REST APIs}',
     repoLink: 'https://github.com/ItzDerian/gym-diary',
-    deployedApp: 'https://tranquil-reaches-54677.herokuapp.com',
+    deployedApp: 'https://salty-reaches-53151.herokuapp.com',
     img: gymDiary,
   },
   {
@@ -39,7 +39,7 @@ export const Projects: ProjectType[] = [
     technologies:
       '[MERN Stack, Semantic UI React Library, Stripe Payment Services API]',
     repoLink: 'https://github.com/yogs0ddhoth/QuizMaster',
-    deployedApp: 'https://polar-island-54317.herokuapp.com',
+    deployedApp: 'https://yogs0ddhoth-quizmaster.herokuapp.com',
     img: quizmaster,
   },
   {
