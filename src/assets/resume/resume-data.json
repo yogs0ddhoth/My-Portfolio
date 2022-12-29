@@ -4,25 +4,23 @@
     "Exposure To:": [ "Go", "Java", "C#" ]
   },
   "backend": {
-    "frameworks": [ "Nest.js", "SpringBoot" ],
+    "Frameworks": [ "Nest.js", "SpringBoot" ],
     
-    "webServers": [ "Express.js", "Flask", "Actix_Web", "Gin", "Apollo" ],
+    "Web Servers": [ "Express.js", "Flask", "Actix_Web", "Gin", "Apollo" ],
 
-    "apis": [ "GraphAL", "REST" ],
+    "API Design": [ "GraphAL", "REST" ],
 
-    "orms": [ "Prisma", "Sequelize", "Mongoose", "SQLAlchemy", "JPR" ],
+    "ORMS": [ "Prisma", "Sequelize", "Mongoose", "SQLAlchemy", "JPR" ],
 
-    "dbs": [ "MySQL", "PostgreSQL", "SQLite3", "MongoDB", "DynamoDB" ]
+    "Databases": [ "MySQL", "PostgreSQL", "SQLite3", "MongoDB", "DynamoDB" ]
   },
   "frontend": {
-    "frameworks": [ "Next.js", "Angular", "ReactJS", "Handlebars" ],
+    "Frameworks": [ "Next.js", "Angular", "ReactJS", "Handlebars" ],
 
-    "componentLibs": [ "ngx-bootstrap", "Material UI", "Semantic UI" ],
+    "UI Design": [ "Tailwind CSS", "Bootstrap", "ngx-bootstrap", "Material UI", "Semantic UI" ],
 
-    "preprocessors": [ "Tailwind CSS", "Bootstrap" ],
+    "API Interaction": [ "React Router", "React Query", "Apollo", "Axios" ],
 
-    "api": [ "React Router", "React Query", "Apollo Client", "Apollo Angular", "Axios" ],
-
-    "utils": [ "Web API", "Webpack", "Babel", "Service Workers" ]
+    "Utils": [ "Web API", "Webpack", "Babel", "Service Workers" ]
   }
 }
