@@ -2,17 +2,20 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
+import resume from '../assets/resume/resume-data.json'
 import benLinResume from '../assets/resume/Ben-Lin_Resume.pdf';
 
 import Page from '../components/Page';
-import VerticalTabs from '../components/Resume';
+import ResumeTabs from '../components/Resume';
 
 export default function Resume({
   matchDownXs,
   matchDownSm,
+  matchDownMd,
 }: {
   matchDownXs: Boolean;
   matchDownSm: boolean;
+  matchDownMd: boolean;
 }) {
   return (
     <Page
@@ -22,7 +25,7 @@ export default function Resume({
         ),
         subheader: <Typography variant="subtitle1">Skills</Typography>,
       }}
-      content={<VerticalTabs matchDownSm={matchDownSm} />}
+      content={<ResumeTabs matchDownSm={matchDownMd} resume={resume} />}
       actions={
         <Link underline="none" href={benLinResume} download>
           <Button

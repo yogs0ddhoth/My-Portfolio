@@ -29,7 +29,7 @@ export default function App() {
         <Route
           path="/resume"
           element={
-            <Resume matchDownXs={matchDownXs} matchDownSm={matchDownSm} />
+            <Resume matchDownXs={matchDownXs} matchDownSm={matchDownSm} matchDownMd={matchDownMd} />
           }
         />
       </Routes>
