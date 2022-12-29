@@ -1,0 +1,28 @@
+{
+  "languages" : {
+    "Development Languages:": [ "HTML5", "CSS3", "Typescript/Node.js", "Python", "SQL", "Rust" ],
+    "Exposure To:": [ "Go", "Java", "C#" ]
+  },
+  "backend": {
+    "frameworks": [ "Nest.js", "SpringBoot" ],
+    
+    "webServers": [ "Express.js", "Flask", "Actix_Web", "Gin", "Apollo" ],
+
+    "apis": [ "GraphAL", "REST" ],
+
+    "orms": [ "Prisma", "Sequelize", "Mongoose", "SQLAlchemy", "JPR" ],
+
+    "dbs": [ "MySQL", "PostgreSQL", "SQLite3", "MongoDB", "DynamoDB" ]
+  },
+  "frontend": {
+    "frameworks": [ "Next.js", "Angular", "ReactJS", "Handlebars" ],
+
+    "componentLibs": [ "ngx-bootstrap", "Material UI", "Semantic UI" ],
+
+    "preprocessors": [ "Tailwind CSS", "Bootstrap" ],
+
+    "api": [ "React Router", "React Query", "Apollo Client", "Apollo Angular", "Axios" ],
+
+    "utils": [ "Web API", "Webpack", "Babel", "Service Workers" ]
+  }
+}
