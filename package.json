@@ -26,7 +26,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "prettier": "npx prettier --write src",
+    "format": "npx prettier --write src",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -64,7 +64,7 @@
     "autoprefixer": "^10.4.7",
     "gh-pages": "^4.0.0",
     "postcss": "^8.4.14",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.1",
     "tailwindcss": "^3.1.4"
   },
   "prettier": {
