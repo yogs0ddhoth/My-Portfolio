@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -6,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import { ResumeData } from '../../assets/resume';
 
 function a11yProps(index: number) {
   return {
@@ -28,8 +30,8 @@ const TabPanel = ({ children, value, index, ...other }: TabPanelProps) => (
     {...other}
   >
     {value === index && (
-      <Box sx={{ p: 3 }}>
-        <Typography>{children}</Typography>
+      <Box sx={{ p: 3, display: 'flex', flexDirection: 'row' }}>
+        {children}
       </Box>
     )}
   </div>
@@ -46,7 +48,15 @@ const PanelList = ({ list }: { list: string[] }) => (
   </List>
 );
 
-export default function Resume({ matchDownSm }: { matchDownSm: boolean }) {
+export default function Resume({
+  matchDownSm,
+  resume: {
+    languages, backend, frontend
+  },
+}: {
+  matchDownSm: boolean;
+  resume: ResumeData;
+}) {
   const [value, setValue] = React.useState(0);
 
   return (
@@ -68,32 +78,37 @@ export default function Resume({ matchDownSm }: { matchDownSm: boolean }) {
           borderColor: 'divider',
         }}
       >
-        <Tab label="Languages" {...a11yProps(0)} />
-        <Tab label="Frameworks" {...a11yProps(1)} />
-        <Tab label="Tools" {...a11yProps(2)} />
+        <Tab sx={{ p:2 }} label="Languages" {...a11yProps(0)} />
+        <Tab sx={{ p:2 }} label="Backend" {...a11yProps(1)} />
+        <Tab sx={{ p:2 }} label="Frontend" {...a11yProps(2)} />
       </Tabs>
 
       <TabPanel value={value} index={0}>
-        <PanelList
-          list={['HTML', 'CSS', 'TypeScript/JS', 'Python', 'SQL', 'GraphQL']}
-        />
+        {
+          Object.keys(languages).map(key => (
+            <PanelList
+              list={[key, ...languages[key]]}
+            />
+          ))
+        }
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <PanelList
-          list={[
-            'Flask',
-            'Express.js',
-            'React',
-            'Angular',
-            'Tailwind CSS',
-            'Next.js',
-          ]}
-        />
+        {
+          Object.keys(backend).map(key => (
+            <PanelList
+              list={[key, ...backend[key]]}
+            />
+          ))
+        }
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <PanelList
-          list={['Node.js', 'MongoDB', 'MySQL', 'Webpack', 'Github', 'Heroku']}
-        />
+        {
+          Object.keys(frontend).map(key => (
+            <PanelList
+              list={[key, ...frontend[key]]}
+            />
+          ))
+        }
       </TabPanel>
     </Box>
   );
