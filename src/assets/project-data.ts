@@ -28,7 +28,7 @@ export const Projects: ProjectData[] = [
     name: 'Blogme',
     description: 'A Full-Stack Blogging Application',
     technologies:
-      '[Flask, SQLAlchemy, REST API, MaterialUI React Library, Tailwindcss]',
+      '[Flask, SQLAlchemy, REST API, React-Query, MaterialUI React Library, Tailwindcss]',
     repoLink: 'https://github.com/yogs0ddhoth/blogme-v2',
     deployedApp: 'https://yogs0ddhoth-blogme-v2.herokuapp.com',
     img: blogme_v2,
