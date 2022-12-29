@@ -7,28 +7,36 @@ import findYourForecase from './images/Find-Your-Forecast.png';
 // import showWhatYouKnow from './images/Show-What-You-Know.png'; // legacy project
 import underConstruction from './images/under-construction.jpg';
 
-export interface ProjectType {
+export interface ProjectData {
   name: string;
   description: string;
   technologies: string;
   repoLink: string;
-  deployedApp: string;
+  deployedApp?: string;
   img: string;
 }
-export const Projects: ProjectType[] = [
+export const Projects: ProjectData[] = [
+  {
+    name: 'Cinematic v2',
+    description: 'A Better Movie Search Engine',
+    technologies:
+      '[Nest.js, JWT Auth, GraphQL API, Apollo Federation Microservices, SQLite3/Prisma, MongoDB/Mongoose]',
+    repoLink: 'https://github.com/yogs0ddhoth/Cinematic_v2',
+    img: underConstruction,
+  },
   {
     name: 'Blogme',
-    description: 'A Full-Stack Blog',
+    description: 'A Full-Stack Blogging Application',
     technologies:
-      '{Flask, SQLAlchemy, REST, MaterialUI React Library, Tailwindcss}',
+      '[Flask, SQLAlchemy, REST API, MaterialUI React Library, Tailwindcss]',
     repoLink: 'https://github.com/yogs0ddhoth/blogme-v2',
     deployedApp: 'https://yogs0ddhoth-blogme-v2.herokuapp.com',
     img: blogme_v2,
   },
   {
     name: 'Gym Diary',
-    description: 'A Workout Tracking App',
-    technologies: '{Express.js, MySQL, Sequelize ORM, REST APIs}',
+    description: 'A Workout Tracking Application',
+    technologies: '[Express.js, MySQL, Sequelize ORM, REST API, Handlebars]',
     repoLink: 'https://github.com/ItzDerian/gym-diary',
     deployedApp: 'https://salty-reaches-53151.herokuapp.com',
     img: gymDiary,
@@ -37,7 +45,7 @@ export const Projects: ProjectType[] = [
     name: 'Quizmaster',
     description: 'A Trivia Question Exchange',
     technologies:
-      '[MERN Stack, Semantic UI React Library, Stripe Payment Services API]',
+      '[MERN Stack, JWT Auth, Semantic UI React Library, Stripe Payment Services API]',
     repoLink: 'https://github.com/yogs0ddhoth/QuizMaster',
     deployedApp: 'https://yogs0ddhoth-quizmaster.herokuapp.com',
     img: quizmaster,
@@ -45,7 +53,7 @@ export const Projects: ProjectType[] = [
   {
     name: 'CineMatic',
     description: 'A Movie Search Engine',
-    technologies: '[ES6, JQuery/AJAX, Web API, Bootstrap]',
+    technologies: '[JQuery/AJAX, Web API, Bootstrap]',
     repoLink: 'https://github.com/tnoonan88/Cinematic-Film-Finder',
     deployedApp: 'https://tnoonan88.github.io/Cinematic-Film-Finder/',
     img: cinematic,
@@ -66,12 +74,4 @@ export const Projects: ProjectType[] = [
   //   deployedApp: "https://yogs0ddhoth.github.io/Show-what-you-know/",
   //   img: showWhatYouKnow
   // },
-  {
-    name: 'Coming Soon!',
-    description: '',
-    technologies: '',
-    repoLink: '',
-    deployedApp: '',
-    img: underConstruction,
-  },
 ];
