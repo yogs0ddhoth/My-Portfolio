@@ -3,11 +3,11 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { ResumeData } from '../../assets/resume';
+import { SxProps, Theme } from '@mui/material';
 
 function a11yProps(index: number) {
   return {
@@ -20,8 +20,9 @@ interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
+  sx?: SxProps<Theme>
 }
-const TabPanel = ({ children, value, index, ...other }: TabPanelProps) => (
+const TabPanel = ({ children, value, index, sx, ...other }: TabPanelProps) => (
   <div
     role="tabpanel"
     hidden={value !== index}
@@ -30,7 +31,7 @@ const TabPanel = ({ children, value, index, ...other }: TabPanelProps) => (
     {...other}
   >
     {value === index && (
-      <Box sx={{ p: 3, display: 'flex', flexDirection: 'row' }}>
+      <Box sx={{ p: 3, display: 'flex', flexDirection: 'row', justifyContent: 'center', ...sx }}>
         {children}
       </Box>
     )}
@@ -38,10 +39,10 @@ const TabPanel = ({ children, value, index, ...other }: TabPanelProps) => (
 );
 const PanelList = ({ list }: { list: string[] }) => (
   <List>
-    {list.map((element) => {
+    {list.map((element, index) => {
       return (
-        <ListItem>
-          <ListItemText>{element}</ListItemText>
+        <ListItem sx={{ py: 0 }}>
+          <ListItemText sx={{ textDecoration: index === 0 ? 'underline': '' }}>{element}</ListItemText>
         </ListItem>
       );
     })}
@@ -49,12 +50,12 @@ const PanelList = ({ list }: { list: string[] }) => (
 );
 
 export default function Resume({
-  matchDownSm,
+  matchDownMd,
   resume: {
     languages, backend, frontend
   },
 }: {
-  matchDownSm: boolean;
+  matchDownMd: boolean;
   resume: ResumeData;
 }) {
   const [value, setValue] = React.useState(0);
@@ -64,11 +65,13 @@ export default function Resume({
       sx={{
         bgcolor: 'background.paper',
         display: 'flex',
-        flexDirection: matchDownSm ? 'column' : 'row',
+        flexDirection: matchDownMd ? 'column' : 'row',
+        // justifyContent: 'center'
       }}
     >
       <Tabs
-        orientation={matchDownSm ? 'horizontal' : 'vertical'}
+        centered={true}
+        orientation={matchDownMd ? 'horizontal' : 'vertical'}
         variant="scrollable"
         value={value}
         onChange={(_, newValue: number) => setValue(newValue)}
@@ -83,7 +86,7 @@ export default function Resume({
         <Tab sx={{ p:2 }} label="Frontend" {...a11yProps(2)} />
       </Tabs>
 
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={0} sx={{ justifyContent: 'start' }}>
         {
           Object.keys(languages).map(key => (
             <PanelList

@@ -22,14 +22,14 @@ export default function App() {
         <Route
           path="/portfolio"
           element={
-            <Portfolio matchDownMd={matchDownMd} matchUpLg={matchUpLg} />
+            <Portfolio matchDownSm={matchDownSm} matchUpLg={matchUpLg} />
           }
         />
         <Route path="/contact" element={<Contact />} />
         <Route
           path="/resume"
           element={
-            <Resume matchDownXs={matchDownXs} matchDownSm={matchDownSm} matchDownMd={matchDownMd} />
+            <Resume matchDownXs={matchDownXs} matchDownMd={matchDownMd} />
           }
         />
       </Routes>
