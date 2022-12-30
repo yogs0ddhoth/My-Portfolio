@@ -1,7 +1,7 @@
 {
   "languages" : {
-    "Development Languages:": [ "HTML5", "CSS3", "Typescript/Node.js", "Python", "SQL", "Rust" ],
-    "Exposure To:": [ "Go", "Java", "C#" ]
+    "Development Languages": [ "TypeScript", "Python", "Rust","SQL", "HTML5", "CSS3" ],
+    "Exposure To": [ "Go", "Java", "C#" ]
   },
   "backend": {
     "Frameworks": [ "Nest.js", "SpringBoot" ],
@@ -17,9 +17,9 @@
   "frontend": {
     "Frameworks": [ "Next.js", "Angular", "ReactJS", "Handlebars" ],
 
-    "UI Design": [ "Tailwind CSS", "Bootstrap", "ngx-bootstrap", "Material UI", "Semantic UI" ],
+    "UI Design": [ "Tailwind CSS", "Bootstrap", "ngx-bootstrap", "React Router", "Material UI", "Semantic UI" ],
 
-    "API Interaction": [ "React Router", "React Query", "Apollo", "Axios" ],
+    "API Interaction": [ "React Query", "Apollo", "Axios" ],
 
     "Utils": [ "Web API", "Webpack", "Babel", "Service Workers" ]
   }
