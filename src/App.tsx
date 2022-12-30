@@ -10,10 +10,10 @@ import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 
 export default function App() {
-  const matchDownXs = useMediaQuery(useTheme().breakpoints.down('xs'));
-  const matchDownSm = useMediaQuery(useTheme().breakpoints.down('sm'));
-  const matchDownMd = useMediaQuery(useTheme().breakpoints.down('md'));
-  const matchUpLg = useMediaQuery(useTheme().breakpoints.up('lg'));
+  const matchDownXs = useMediaQuery(useTheme().breakpoints.down(480));
+  const matchDownSm = useMediaQuery(useTheme().breakpoints.down(640));
+  const matchDownMd = useMediaQuery(useTheme().breakpoints.down(1024));
+  const matchUpLg = useMediaQuery(useTheme().breakpoints.up(1280));
 
   return (
     <Layout>
@@ -29,7 +29,11 @@ export default function App() {
         <Route
           path="/resume"
           element={
-            <Resume matchDownXs={matchDownXs} matchDownMd={matchDownMd} />
+            <Resume
+              matchDownXs={matchDownXs}
+              matchDownSm={matchDownSm}
+              matchDownMd={matchDownMd}
+            />
           }
         />
       </Routes>
