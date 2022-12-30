@@ -31,6 +31,7 @@ interface LinkTooltipProps {
   title: string;
   children: react.ReactElement;
 }
+
 const LinkTooltip = ({
   href,
   placement,
@@ -105,23 +106,17 @@ const Project = ({
 };
 
 export default function Portfolio({
-  matchDownMd,
+  matchDownSm,
   matchUpLg,
 }: {
-  matchDownMd: boolean;
+  matchDownSm: boolean;
   matchUpLg: boolean;
 }) {
   return (
     <ImageList
       className="pb-4"
       variant="masonry"
-      cols={
-        matchDownMd 
-          ? 1 
-          : matchUpLg 
-            ? 3 
-            : 2
-      }
+      cols={matchDownSm ? 1 : matchUpLg ? 3 : 2}
       gap={8}
     >
       <ImageListItem key="Subheader" className="w-full">
