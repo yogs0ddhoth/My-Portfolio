@@ -1,11 +1,11 @@
 export interface ResumeData {
-  languages: {
-    [index: string]: string[]
+  [index: string]: {
+    [index: string]: string[];
   };
-  backend: {
-    [index: string]: string[]
+  [index: string]: {
+    [index: string]: string[];
   };
-  frontend: {
-    [index: string]: string[]
+  [index: string]: {
+    [index: string]: string[];
   };
 }

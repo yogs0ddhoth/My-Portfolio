@@ -1,26 +1,40 @@
 {
-  "languages" : {
-    "Development Languages": [ "TypeScript", "Python", "Rust","SQL", "HTML5", "CSS3" ],
-    "Exposure To": [ "Go", "Java", "C#" ]
+  "Languages": {
+    "Development Languages": [
+      "TypeScript",
+      "Python",
+      "Rust",
+      "SQL",
+      "HTML5",
+      "CSS3"
+    ],
+    "Exposure To": ["Go", "Java", "C#"]
   },
-  "backend": {
-    "Frameworks": [ "Nest.js", "SpringBoot" ],
-    
-    "Web Servers": [ "Express.js", "Flask", "Actix_Web", "Gin", "Apollo" ],
+  "Backend": {
+    "Frameworks": ["Nest.js", "SpringBoot"],
 
-    "API Design": [ "GraphAL", "REST" ],
+    "Web Servers": ["Express.js", "Flask", "Actix_Web", "Gin", "Apollo"],
 
-    "ORMS": [ "Prisma", "Sequelize", "Mongoose", "SQLAlchemy", "JPR" ],
+    "API Design": ["GraphAL", "REST"],
 
-    "Databases": [ "MySQL", "PostgreSQL", "SQLite3", "MongoDB", "DynamoDB" ]
+    "ORMS": ["Prisma", "Sequelize", "Mongoose", "SQLAlchemy", "JPR"],
+
+    "Databases": ["MySQL", "PostgreSQL", "SQLite3", "MongoDB", "DynamoDB"]
   },
-  "frontend": {
-    "Frameworks": [ "Next.js", "Angular", "ReactJS", "Handlebars" ],
+  "Frontend": {
+    "Frameworks": ["Next.js", "Angular", "ReactJS", "Handlebars"],
 
-    "UI Design": [ "Tailwind CSS", "Bootstrap", "ngx-bootstrap", "React Router", "Material UI", "Semantic UI" ],
+    "UI Design": [
+      "Tailwind CSS",
+      "Bootstrap",
+      "ngx-bootstrap",
+      "React Router",
+      "Material UI",
+      "Semantic UI"
+    ],
 
-    "API Interaction": [ "React Query", "Apollo", "Axios" ],
+    "API Interaction": ["React Query", "Apollo", "Axios"],
 
-    "Utils": [ "Web API", "Webpack", "Babel", "Service Workers" ]
+    "Utils": ["Web API", "Webpack", "Babel", "Service Workers"]
   }
 }
