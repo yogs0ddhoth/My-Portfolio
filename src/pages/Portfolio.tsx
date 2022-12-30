@@ -41,12 +41,13 @@ const LinkTooltip = ({
   <Tooltip
     placement={placement ? placement : 'bottom'}
     title={
-      href 
-        ? (
-          <Link href={href} color="inherit">{title}</Link>
-        ) : (
-          <Typography variant='inherit'>{title}</Typography>
-        )
+      href ? (
+        <Link href={href} color="inherit">
+          {title}
+        </Link>
+      ) : (
+        <Typography variant="inherit">{title}</Typography>
+      )
     }
   >
     {children}
@@ -72,7 +73,7 @@ const Project = ({
         title={
           <LinkTooltip
             href={deployedApp}
-            title={deployedApp ? "Deployed App" : "Coming Soon!" }
+            title={deployedApp ? 'Deployed App' : 'Coming Soon!'}
             placement="bottom-start"
           >
             <Link variant="h5" color="inherit" href={deployedApp}>
